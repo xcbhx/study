@@ -1,12 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Study</title>
-</head>
-<body>
-  <h1>Let's get started!</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Home - Study{% endblock %}
+
+  <h1>Pick a Category:</h1>
+  <ul>
+    <a href="#"><li>Big O Notation</li></a>
+    <a href="/binarySearch.html"><li>Binary Search</li></a>
+    <a href="/selectionsort.html"><li>Selection Sort</li></a>
+    <a href="/recursion.html"><li>Recursion</li></a>
+    <a href="/quicksort.html"><li>Quicksort</li></a>
+    <a href="/hashTables.html"><li>Hash Tables</li></a>
+    <a href="#"><li>Breadth-First Search</li></a>
+    <a href="#"><li>Dijkstra's Algorithm</li></a>
+    <a href="#"><li>Greedy Algorithm</li></a>
+    <a href="#"><li>Dynamic Programming</li></a>
+    <a href="#"><li>K-Nearest Neighbors</li></a>
+  </ul>
+
+{% endblock %}
