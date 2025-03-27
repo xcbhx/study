@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% block title %}Home - Study{% endblock %}
+{% block title %}Category - Study{% endblock %}
 
 {% block content %}
   <h1>Pick a Category:</h1>
@@ -8,7 +8,16 @@
     <a href="/binarySearch"><li>Introduction to Algorithms</li></a>
     <a href="/selectionsort"><li>Selection Sort</li></a>
     <a href="/recursion"><li>Recursion</li></a>
-    <a href="/quicksort"><li>Quicksort</li></a>
+    <!-- Dropdown for Quicksort -->
+    <li class="dropdown">
+      <span>Quicksort ▼</span>
+      <ul class="dropdown-content">
+        <li><a href="/quicksortNotes">Review Quicksort</a></li>
+        <li><a href="/quicksortQuiz">Quicksort Quiz</a></li>
+      </ul>
+    </li>
+
+
     <a href="/hashTables"><li>Hash Tables</li></a>
     <a href="#"><li>Breadth-First Search</li></a>
     <a href="#"><li>Dijkstra's Algorithm</li></a>

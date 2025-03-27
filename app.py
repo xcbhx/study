@@ -16,6 +16,13 @@ def selection_sort():
     return 'Form submitted successfully!'
   return render_template('/selectionsort.html')
 
+@app.route('/quicksortNotes', methods=['GET'])
+def quicksort():
+  return render_template('/quicksortNotes.html')
+
+@app.route('/quicksortQuiz', methods=['GET'])
+def quicksortQuiz():
+  return render_template('/quicksortQuiz.html')
 
 if __name__ == '__main__':
   app.run(debug=True)

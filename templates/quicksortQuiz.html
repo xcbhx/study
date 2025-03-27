@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+{% block title %}Quicksort{% endblock %}
+
+{% block content %}
+  <form action="/" method="get">
+    <fieldset>
+      <legend>1. What is the primary concept behind the Quicksort algorithm?</legend>
+      <label for="">
+        <input type="radio" name="question1" value="option1">A. Repeatedly merging sorted subarrays
+      </label>
+      <label for="">
+        <input type="radio" name="question1" value="option2">B. Swapping adjacent elements to sort the array
+      </label>
+      <label for="">
+        <input type="radio" name="question1" value="option3">C. Dividing the array using a pivot and sorting the partitions recursively
+      </label>
+      <label for="">
+        <input type="radio" name="question1" value="option4">D. Finding the smallest element and placing it in its correct position
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>2. What is the average time complexity of Quicksort?</legend>
+      <label for="">
+        <input type="radio" name="question2" value="option1">A. O(n)
+      </label>
+      <label for="">
+        <input type="radio" name="question2" value="option2">B. O(n log n)
+      </label>
+      <label for="">
+        <input type="radio" name="question2" value="option3">C. O(n²)
+      </label>
+      <label for="">
+        <input type="radio" name="question2" value="option4">D. O(log n)
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>1. What is the primary concept behind the Quicksort algorithm?</legend>
+      <label for="">
+        <input type="radio" name="question1" value="option1">A. Repeatedly merging sorted subarrays
+      </label>
+      <label for="">
+        <input type="radio" name="question1" value="option2">B. Swapping adjacent elements to sort the array
+      </label>
+      <label for="">
+        <input type="radio" name="question1" value="option3">C. Dividing the array using a pivot and sorting the partitions recursively
+      </label>
+      <label for="">
+        <input type="radio" name="question1" value="option4">D. Finding the smallest element and placing it in its correct position
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>3. Which scenario could lead to the worst-case time complexity in Quicksort?</legend>
+      <label for="">
+        <input type="radio" name="question1" value="option1">A. The pivot is always chosen as the middle element
+      </label>
+      <label for="">
+        <input type="radio" name="question1" value="option2">B. The pivot divides the array into nearly equal parts
+      </label>
+      <label for="">
+        <input type="radio" name="question1" value="option3">C. The pivot is always the smallest or largest element
+      </label>
+      <label for="">
+        <input type="radio" name="question1" value="option4">D. The array contains all unique elements
+      </label>
+    </fieldset>
+  
+    <fieldset>
+      <legend>4. Explain how Quicksort works using the array [8, 3, 1, 7, 0, 10, 2]. Show the partitions 
+        and the pivot selections for one complete iteration.
+      </legend>
+      <label for="">
+        <input type="text" name="question4" value="Explain Answer">
+      </label>
+    </fieldset>
+  
+    <fieldset>
+      <legend>5. How does the choice of pivot affect Quicksort's performance, and what strategies can be 
+        used to improve pivot selection?
+      </legend>
+      <label for="">
+        <input type="text" name="question5" value="Enter Answer"> 
+      </label>
+    </fieldset>
+    
+    <button type="submit">Submit</button>
+  </form>
+
+{% endblock %}
