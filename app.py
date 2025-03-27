@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -6,9 +6,15 @@ app = Flask(__name__)
 def home():
   return render_template('index.html')
 
-@app.route('/selectionsort.html')
+@app.route('/category', methods=['GET'])
+def category():
+  return render_template('category.html')
+
+@app.route('/selectionsort', methods=['GET', 'POST'])
 def selection_sort():
-  return render_template('selectionsort.html')
+  if request.method == 'POST':
+    return 'Form submitted successfully!'
+  return render_template('/selectionsort.html')
 
 
 if __name__ == '__main__':
