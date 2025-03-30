@@ -1,0 +1,18 @@
+[
+  {
+    "id":"Quicksort Answer",
+    "question1": "✅ C: Quicksort uses a pivot to partition the array into two subarrays: one with elements smaller than the pivot and one with larger elements. It then recursively sorts these partitions.",
+    "question2": "✅ B: Quicksort has an average time complexity of O(n log n) due to its divide-and-conquer approach. However, in the worst case, it can degrade to O(n²) if the pivot selection is poor.",
+    "question3": "✅ C: The worst-case scenario for Quicksort happens when the pivot consistently results in unbalanced partitions, particularly when the pivot is the smallest or largest element. This leads to a time complexity of O(n²).",
+    "question4": "Choose Pivot: Let’s pick 7 as the pivot. Partition: * Left (smaller than 7): [3, 1, 0, 2] * Right (greater than 7): [8, 10] Recursively Sort Left and Right Partitions: * Left Partition: Choose pivot 2 → [0, 1] | 2 | [3] * Right Partition: Choose pivot 10 → [8] | 10  Final Result: [0, 1, 2, 3, 7, 8, 10]",
+    "question5": "The choice of pivot directly impacts Quicksort's efficiency. If the pivot results in balanced partitions, the algorithm performs closer to its average time complexity of O(n log n). Poor pivot selection (e.g., always choosing the first or last element) can lead to O(n²) time complexity. Strategies to improve pivot selection include choosing the median of three elements (first, middle, and last) or selecting a random pivot to reduce the chance of worst-case performance."
+  },
+  {
+    "id":"HashTable Answer",
+    "question1": "",
+    "question2": "",
+    "question3": "",
+    "question4": "",
+    "question5": ""
+  }
+]
