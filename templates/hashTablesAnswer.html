@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Hash Tables Answers{% endblock %}
+
+{% block content %}
+  <h1>Quicksort Quiz Results</h1>
+  <form action="/hashTablesQuiz" method="get">
+    <button type="submit">Retake Quiz</button>
+  </form>
+
+  {% for question, user_answer in user_answers.items() %}
+    <fieldset>
+      <legend>Question {{ loop.index }}</legend>
+      <p>Your Answer: {{ user_answer }}</p>
+      <p> Correct Answer: <strong>{{ hashTables_answers[question] }}</strong></p>
+    </fieldset>
+  {% endfor %}
+{% endblock %}

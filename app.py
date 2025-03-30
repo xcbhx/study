@@ -43,6 +43,24 @@ def quicksortAnswers():
   else:
     return "Quicksort answers not found.", 404
 
+@app.route('/hashTablesNotes')
+def hashTables():
+  return render_template('/hashTablesNotes.html')
+
+@app.route('/hashTablesQuiz', methods=['GET'])
+def hashTablesQuiz():
+  return render_template('/hashTablesQuiz.html')
+
+@app.route('/submit_hashTables_quiz', methods=['POST'])
+def hashTablesAnswers():
+  user_answers = {key: request.form.get(key, "") for key in ["question1", "question2", "question3", "question4", "question5"]}
+  hashTables_correct_answer = next((item for item in quiz_data if item["id"] == "HashTable Answer"), None)
+  if hashTables_correct_answer:
+    return render_template('/hashTablesAnswer.html', user_answers=user_answers, hashTables_answers=hashTables_correct_answer)
+  else:
+    return "Hash Table answers not found.", 404
+
+
 
 if __name__ == '__main__':
   app.run(debug=True)

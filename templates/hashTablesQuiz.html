@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+
+{% block title %}Hash Table{% endblock %}
+
+{% block content %}
+  <form action="/submit_hashTables_quiz" method="post">
+    <fieldset>
+      <legend>1. What is the primary advantage of using a hash table?</legend>
+      <label for="question1_a">
+        <input type="radio" name="question1" value="A" id="question1_a">A. It maintains elements in sorted order
+      </label>
+      <br />
+      <label for="question1_b">
+        <input type="radio" name="question1" value="B" id="question1_b">B.  It provides fast lookups, insertions, and deletions on average
+      </label>
+      <br />
+      <label for="question1_c">
+        <input type="radio" name="question1" value="C" id="question1_c">C. It requires less memory than other data structures
+      </label>
+      <br />
+      <label for="question1_d">
+        <input type="radio" name="question1" value="D" id="question1_d">D. It does not require a hashing function
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>2. What problem occurs when two different keys produce the same hash value in a hash table?</legend>
+      <label for="question2_a">
+        <input type="radio" name="question2" value="A" id="question2_a">A. Hashing failure
+      </label>
+      <br />
+      <label for="question2_b">
+        <input type="radio" name="question2" value="B" id="question2_b">B. Key duplication
+      </label>
+      <br />
+      <label for="question2_c">
+        <input type="radio" name="question2" value="C" id="question2_c">C. Hash collision
+      </label>
+      <br />
+      <label for="question2_d">
+        <input type="radio" name="question2" value="D" id="question2_d">D. Data loss
+      </label>
+    </fieldset>
+
+    <fieldset>
+      <legend>3. What is the worst-case time complexity for searching in a hash table?</legend>
+      <label for="question3_a">
+        <input type="radio" name="question3" value="A" id="question3_a">A. O(1)
+      </label>
+      <br />
+      <label for="question3_b">
+        <input type="radio" name="question3" value="B" id="question3_b">B. O(log n)
+      </label>
+      <br />
+      <label for="question3_c">
+        <input type="radio" name="question3" value="C" id="question3_c">C. O(n)
+      </label>
+      <br />
+      <label for="question3_d">
+        <input type="radio" name="question3" value="D" id="question3_d">D. O(n²)
+      </label>
+    </fieldset>
+  
+    <fieldset>
+      <legend>4. How does a hash function work, and why is it important for a hash table?</legend>
+      <label for="question4">
+        <input type="text" name="question4" value="Explain Answer" id="question4" onfocus="this.value = ''">
+      </label>
+    </fieldset>
+  
+    <fieldset>
+      <legend>5. Suppose you are storing a list of student IDs and their corresponding grades in a hash table. 
+        If you experience frequent hash collisions, what strategies can you use to handle them?
+      </legend>
+      <label for="question5">
+        <input type="text" name="question5" value="Enter Answer" id="question5" onfocus="this.value = ''"> 
+      </label>
+    </fieldset>
+    
+    <button type="submit">Submit</button>
+  </form>
+
+{% endblock %}

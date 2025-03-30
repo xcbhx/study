@@ -9,10 +9,10 @@
   },
   {
     "id":"HashTable Answer",
-    "question1": "",
-    "question2": "",
-    "question3": "",
-    "question4": "",
-    "question5": ""
+    "question1": "✅ B: Hash tables provide O(1) average time complexity for lookups, insertions, and deletions, making them extremely efficient for quick data retrieval.",
+    "question2": "✅ C: A hash collision occurs when two keys hash to the same index in a hash table. This can be resolved using methods like chaining (linked lists at each index) or open addressing (probing for the next available slot).",
+    "question3": "✅ C: The worst-case time complexity is O(n) when all keys hash to the same index (causing a long chain in separate chaining or many probes in open addressing). However, with a good hash function and low load factor, the average time remains O(1).",
+    "question4": "Answer: A hash function takes an input (key) and converts it into a fixed-size numerical index that maps to a position in the hash table. A good hash function distributes keys evenly across the table to minimize collisions, ensuring fast lookups, insertions, and deletions. Poor hash functions lead to clustering, which degrades performance.",
+    "question5": "Answer: Two common collision-handling strategies are: Separate Chaining – Store multiple key-value pairs at the same index using a linked list. Open Addressing – Find an empty slot using techniques like linear probing (checking the next available index) or quadratic probing (checking indices based on a formula). Using a better hash function and maintaining a low load factor (entries/table size) also helps reduce collisions."
   }
 ]
