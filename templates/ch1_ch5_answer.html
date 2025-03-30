@@ -1,10 +1,10 @@
 {% extends 'base.html' %}
 
-{% block title %}Hash Tables Answers{% endblock %}
+{% block title %}Ch.1 - Ch.5 Answers{% endblock %}
 
 {% block content %}
-  <h1>Hash Tables Quiz Results</h1>
-  <form action="/hashTablesQuiz" method="get">
+  <h1>Ch.1 -Ch.5 Quiz Results</h1>
+  <form action="/ch1_ch5" method="get">
     <button type="submit">Retake Quiz</button>
   </form>
 
@@ -12,7 +12,7 @@
     <fieldset>
       <legend>Question {{ loop.index }}</legend>
       <p>Your Answer: {{ user_answer }}</p>
-      <p> Correct Answer: <strong>{{ hashTables_answers[question] }}</strong></p>
+      <p> Correct Answer: <strong>{{ ch1_ch5_answer[question] }}</strong></p>
     </fieldset>
   {% endfor %}
 {% endblock %}

@@ -1,0 +1,237 @@
+{% extends 'base.html' %}
+
+{% block title %}Quiz: Chapters 1–5 of Grokking Algorithms{% endblock %}
+
+{% block content %}
+  <form action="/submit_ch1_ch5_quiz" method="post">
+    <h1>Multiple-Choice Questions (10 Questions)</h1> 
+    <fieldset>
+      <legend>1. Which of the following best describes binary search?</legend>
+      <label for="question1_a">
+        <input type="radio" name="question1" value="A" id="question1_a">A. It searches sequentially through the list.
+      </label>
+      <br />
+      <label for="question1_b">
+        <input type="radio" name="question1" value="B" id="question1_b">B. It repeatedly divides a sorted list in half to find an element.
+      </label>
+      <br />
+      <label for="question1_c">
+        <input type="radio" name="question1" value="C" id="question1_c">C. It sorts the list before searching.
+      </label>
+      <br />
+      <label for="question1_d">
+        <input type="radio" name="question1" value="D" id="question1_d">D. It works only on lists with unique values.
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>2. What is the main advantage of Quicksort over Selection Sort?</legend>
+      <label for="question2_a">
+        <input type="radio" name="question2" value="A" id="question2_a">A. It has a better worst-case time complexity.
+      </label>
+      <br />
+      <label for="question2_b">
+        <input type="radio" name="question2" value="B" id="question2_b">B. It requires less space.
+      </label>
+      <br />
+      <label for="question2_c">
+        <input type="radio" name="question2" value="C" id="question2_c">C. It has an average time complexity of O(n log n), while Selection Sort is O(n²).
+      </label>
+      <br />
+      <label for="question2_d">
+        <input type="radio" name="question2" value="D" id="question2_d">D. It does not use recursion.
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>3. Which of the following best describes a hash table?</legend>
+      <label for="question3_a">
+        <input type="radio" name="question3" value="A" id="question3_a">A. A data structure that stores key-value pairs and provides fast lookups using a hash function.
+      </label>
+      <br />
+      <label for="question3_b">
+        <input type="radio" name="question3" value="B" id="question3_b">B. A method for sorting numbers efficiently.
+      </label>
+      <br />
+      <label for="question3_c">
+        <input type="radio" name="question3" value="C" id="question3_c">C. A type of linked list with constant-time lookups.
+      </label>
+      <br />
+      <label for="question3_d">
+        <input type="radio" name="question3" value="D" id="question3_d">D. A tree-based structure used for searching data quickly.
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>4. What causes hash collisions in a hash table?</legend>
+      <label for="question4_a">
+        <input type="radio" name="question4" value="A" id="question4_a">A. O(1)
+      </label>
+      <br />
+      <label for="question4_b">
+        <input type="radio" name="question4" value="B" id="question4_b">B. O(log n)
+      </label>
+      <br />
+      <label for="question4_c">
+        <input type="radio" name="question4" value="C" id="question4_c">C. O(n)
+      </label>
+      <br />
+      <label for="question4_d">
+        <input type="radio" name="question4" value="D" id="question4_d">D. O(n²)
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>5. What is a good way to handle hash collisions?</legend>
+      <label for="question5_a">
+        <input type="radio" name="question5" value="A" id="question5_a">A. Sorting the hash table
+      </label>
+      <br />
+      <label for="question5_b">
+        <input type="radio" name="question5" value="B" id="question5_b">B. Using binary search
+      </label>
+      <br />
+      <label for="question5_c">
+        <input type="radio" name="question5" value="C" id="question5_c">C. Separate chaining or open addressing
+      </label>
+      <br />
+      <label for="question5_d">
+        <input type="radio" name="question5" value="D" id="question5_d">D. Using a larger table size
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>6. What is the primary purpose of a hash function in a hash table?</legend>
+      <label for="question6_a">
+        <input type="radio" name="question6" value="A" id="question6_a">A. To randomly shuffle elements in an array
+      </label>
+      <br />
+      <label for="question6_b">
+        <input type="radio" name="question6" value="B" id="question6_b">B. To efficiently map keys to a specific index
+      </label>
+      <br />
+      <label for="question6_c">
+        <input type="radio" name="question6" value="C" id="question6_c">C. To sort elements in ascending order
+      </label>
+      <br />
+      <label for="question6_d">
+        <input type="radio" name="question6" value="D" id="question6_d">D. To reduce the time complexity of sorting
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>7. What is the best-case time complexity of Quicksort?</legend>
+      <label for="question7_a">
+        <input type="radio" name="question7" value="A" id="question7_a">A. O(n log n)
+      </label>
+      <br />
+      <label for="question7_b">
+        <input type="radio" name="question7" value="B" id="question7_b">B. O(n²)
+      </label>
+      <br />
+      <label for="question7_c">
+        <input type="radio" name="question7" value="C" id="question7_c">C. O(n)
+      </label>
+      <br />
+      <label for="question7_d">
+        <input type="radio" name="question7" value="D" id="question7_d">D. O(1)
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>8. What is the key requirement for binary search to work correctly?</legend>
+      <label for="question8_a">
+        <input type="radio" name="question8" value="A" id="question8_a">A. The list must be unsorted.
+      </label>
+      <br />
+      <label for="question8_b">
+        <input type="radio" name="question8" value="B" id="question8_b">B. The list must be sorted.
+      </label>
+      <br />
+      <label for="question8_c">
+        <input type="radio" name="question8" value="C" id="question8_c">C. The list must contain only unique elements.
+      </label>
+      <br />
+      <label for="question8_d">
+        <input type="radio" name="question8" value="D" id="question8_d">D. The list must be an array and not a linked list.
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>9. In which situation would you use Breadth-First Search (BFS)?</legend>
+      <label for="question9_a">
+        <input type="radio" name="question9" value="A" id="question9_a">A. O(1)
+      </label>
+      <br />
+      <label for="question9_b">
+        <input type="radio" name="question9" value="B" id="question9_b">B. O(log n)
+      </label>
+      <br />
+      <label for="question9_c">
+        <input type="radio" name="question9" value="C" id="question9_c">C. O(n)
+      </label>
+      <br />
+      <label for="question9_d">
+        <input type="radio" name="question9" value="D" id="question9_d">D. O(n²)
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>10. If Selection Sort is applied to an array of length n, how many swaps will it perform in the worst case?</legend>
+      <label for="question10_a">
+        <input type="radio" name="question10" value="A" id="question10_a">A. O(n log n)
+      </label>
+      <br />
+      <label for="question10_b">
+        <input type="radio" name="question10" value="B" id="question10_b">B. O(n²)
+      </label>
+      <br />
+      <label for="question10_c">
+        <input type="radio" name="question10" value="C" id="question10_c">C. O(n)
+      </label>
+      <br />
+      <label for="question10_d">
+        <input type="radio" name="question10" value="D" id="question10_d">D. O(1)
+      </label>
+    </fieldset>
+    <br />
+    <h1>Written Questions (5 Questions)</h1>
+    <fieldset>
+      <legend>11. Describe how binary search works using the array [2, 4, 7, 10, 15, 20, 25]. Search for the number 15 and explain each step.</legend>
+      <label for="question11">
+        <input type="text" name="question11" value="Explain Answer" id="question11" onfocus="this.value = ''">
+      </label>
+    </fieldset>
+  
+    <fieldset>
+      <legend>12. Walk through the steps of Selection Sort for the array [29, 10, 14, 37, 13].</legend>
+      <label for="question12">
+        <input type="text" name="question12" value="Enter Answer" id="question12" onfocus="this.value = ''"> 
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>13. Explain why Quicksort is often preferred over Merge Sort despite both having O(n log n) average time complexity.</legend>
+      <label for="question13">
+        <input type="text" name="question13" value="Enter Answer" id="question13" onfocus="this.value = ''"> 
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>14. Explain how a hash table can be used to efficiently store and retrieve student grades.</legend>
+      <label for="question14">
+        <input type="text" name="question14" value="Enter Answer" id="question14" onfocus="this.value = ''"> 
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>15. Why is a poor hash function problematic for a hash table? What issues can it cause?</legend>
+      <label for="question15">
+        <input type="text" name="question15" value="Enter Answer" id="question15" onfocus="this.value = ''"> 
+      </label>
+    </fieldset>
+    <br />
+    <button type="submit">Submit</button>
+  </form>
+
+{% endblock %}

@@ -59,8 +59,19 @@ def hashTablesAnswers():
     return render_template('/hashTablesAnswer.html', user_answers=user_answers, hashTables_answers=hashTables_correct_answer)
   else:
     return "Hash Table answers not found.", 404
+  
+@app.route('/ch1_ch5', methods=['GET'])
+def ch1_ch5_quiz():
+  return render_template('/ch1_ch5.html')
 
-
+@app.route('/submit_ch1_ch5_quiz', methods=['POST'])
+def ch1_ch5():
+  user_answers = {key: request.form.get(key, "") for key in ["question1", "question2", "question3", "question4", "question5", "question6", "question7", "question8", "question9", "question10", "question11", "question12", "question13", "question14", "question15"]}
+  ch1_ch5_correct_answer = next((item for item in quiz_data if item["id"] == "ch1_ch5 Answer"), None)
+  if ch1_ch5_correct_answer:
+    return render_template('/ch1_ch5_answer.html', user_answers=user_answers, ch1_ch5_answer=ch1_ch5_correct_answer)
+  else:
+    return "Ch.1 - Ch.5 answers not found.", 404
 
 if __name__ == '__main__':
   app.run(debug=True)
