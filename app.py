@@ -43,7 +43,7 @@ def quicksortAnswers():
   else:
     return "Quicksort answers not found.", 404
 
-@app.route('/hashTablesNotes')
+@app.route('/hashTablesNotes', methods=['GET'])
 def hashTables():
   return render_template('/hashTablesNotes.html')
 
@@ -72,6 +72,20 @@ def ch1_ch5():
     return render_template('/ch1_ch5_answer.html', user_answers=user_answers, ch1_ch5_answer=ch1_ch5_correct_answer)
   else:
     return "Ch.1 - Ch.5 answers not found.", 404
+  
+@app.route('/breathFirstSearchQuiz', methods=['GET'])
+def breath_first_search_quiz():
+  return render_template('/breathFirstSearchQuiz.html')
 
+@app.route('/submit_breathFirstSearch_quiz', methods=['POST'])
+def breath_first_search():
+  user_answers = {key: request.form.get(key, "") for key in ["question1", "question2", "question3", "question4", "question5", "question6"]}
+  breath_first_search_answer = next((item for item in quiz_data if item["id"] == "BreathFirstSearch Answer"), None)
+  if breath_first_search_answer:
+    return render_template('./breathFirstSearchAnswer.html', user_answers=user_answers, breath_first_search=breath_first_search_answer)
+  else:
+    return "Breath First Search answers not found.", 404
+  
+  
 if __name__ == '__main__':
   app.run(debug=True)
