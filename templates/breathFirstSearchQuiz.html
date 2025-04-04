@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% block title %}Breath-First Search{% endblock %}
+
+{% block content %}
+  <form action="/submit_breathFirstSearch_quiz" method="post">
+    <fieldset>
+      <legend>1. What is Breadth-First Search (BFS), and how does it work?</legend>
+      <label for="question1_a">
+        <input type="radio" name="question1" value="A. A graph algorithm that explores the deepest nodes first using recursion" id="question1_a">
+          A. A graph algorithm that explores the deepest nodes first using recursion
+      </label>
+      <br />
+      <label for="question1_b">
+        <input type="radio" name="question1" value="B. A graph algorithm that explores nodes in a random order using a stack" id="question1_b">
+          B. A graph algorithm that explores nodes in a random order using a stack
+      <br />
+      <label for="question1_c">
+        <input type="radio" name="question1" value="C. A traversal algorithm that explores all neighbors of a node before moving to the next level using a queue" id="question1_c">
+          C. A traversal algorithm that explores all neighbors of a node before moving to the next level using a queue
+      </label>
+      <br />
+      <label for="question1_d">
+        <input type="radio" name="question1" value="D. A sorting algorithm that works by comparing adjacent elements" id="question1_d">
+          D. A sorting algorithm that works by comparing adjacent elements
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>2. What problem occurs when two different keys produce the same hash value in a hash table?</legend>
+      <label for="question2_a">
+        <input type="radio" name="question2" value="A. When you want to use less memory" id="question2_a">
+          A. When you want to use less memory
+      </label>
+      <br />
+      <label for="question2_b">
+        <input type="radio" name="question2" value="B. When you need to explore all paths deeply first" id="question2_b">
+        B. When you need to explore all paths deeply first
+      </label>
+      <br />
+      <label for="question2_c">
+        <input type="radio" name="question2" value="C. When you need to find the shortest path in an unweighted graph" id="question2_c">
+          C. When you need to find the shortest path in an unweighted graph
+      </label>
+      <br />
+      <label for="question2_d">
+        <input type="radio" name="question2" value="D. When you want to sort nodes in topological order" id="question2_d">
+          D. When you want to sort nodes in topological order
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>3. How does BFS ensure the shortest path is found in an unweighted graph?</legend>
+      <label for="question3_a">
+        <input type="radio" name="question3" value="A. It keeps a record of the number of hops between nodes and chooses the maximum" id="question3_a">
+          A. It keeps a record of the number of hops between nodes and chooses the maximum
+      </label>
+      <br />
+      <label for="question3_b">
+        <input type="radio" name="question3" value="B. It visits all nodes randomly until the target is found" id="question3_b">
+          B. It visits all nodes randomly until the target is found
+      </label>
+      <br />
+      <label for="question3_c">
+        <input type="radio" name="question3" value="C. It uses a priority queue to rank paths" id="question3_c">
+          C. It uses a priority queue to rank paths
+      </label>
+      <br />
+      <label for="question3_d">
+        <input type="radio" name="question3" value="D. It explores nodes level by level, guaranteeing the first time it finds a node is via the shortest path" id="question3_d">
+          D. It explores nodes level by level, guaranteeing the first time it finds a node is via the shortest path
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>4. What data structures are commonly used to implement BFS, and why?</legend>
+      <label for="question4_a">
+        <input type="radio" name="question4" value="A. Stack and HashMap, because they allow for backtracking" id="question4_a">
+          A. Stack and HashMap, because they allow for backtracking
+      </label>
+      <br />
+      <label for="question4_b">
+        <input type="radio" name="question4" value="B. Queue and Set, because they ensure nodes are processed in order and avoid revisiting" id="question4_b">
+          B. Queue and Set, because they ensure nodes are processed in order and avoid revisiting
+      </label>
+      <br />
+      <label for="question4_c">
+        <input type="radio" name="question4" value="C. Priority Queue and Stack, for ordering and path optimization" id="question4_c">
+          C. Priority Queue and Stack, for ordering and path optimization
+      </label>
+      <br />
+      <label for="question4_d">
+        <input type="radio" name="question4" value="D. Heap and List, for memory efficiency" id="question4_d">
+          D. Heap and List, for memory efficiency
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>5. Describe how you would apply BFS to find the shortest path from node A to node G in a simple graph.</legend>
+      <label for="question5_a">
+        <input type="radio" name="question5" value="A. Use a stack to follow each path deeply and mark visited nodes" id="question5_a">
+          A. Use a stack to follow each path deeply and mark visited nodes
+      </label>
+      <br />
+      <label for="question5_b">
+        <input type="radio" name="question5" value="B. Randomly select nodes to visit until G is found" id="question5_b">
+          B. Randomly select nodes to visit until G is found
+      </label>
+      <br />
+      <label for="question5_c">
+        <input type="radio" name="question5" value="C. Use a queue to explore each level of neighbors from A and stop when G is found" id="question5_c">
+          C. Use a queue to explore each level of neighbors from A and stop when G is found
+      </label>
+      <br />
+      <label for="question5_d">
+        <input type="radio" name="question5" value="D. Traverse all nodes without marking visited ones to ensure all paths are tried" id="question5_d">
+          D. Traverse all nodes without marking visited ones to ensure all paths are tried
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>6. Why is it important to keep track of the people you've already searched in a BFS algorithm? What problem does this prevent?</legend>
+      <label for="question6">
+        <input type="text" name="question6" value="Explain Answer" id="question6" onfocus="this.value = ''">
+      </label>
+    </fieldset>
+    <br />
+    <button type="submit">Submit</button>
+  </form>
+
+{% endblock %}

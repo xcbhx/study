@@ -32,5 +32,14 @@
     "question13": "✅ Answer: Quicksort sorts in place, requiring only O(log n) space, while Merge Sort needs O(n) extra space. Quicksort also performs better on average due to fewer operations, making it faster in practice.",
     "question14": "✅ Answer: Each student ID is used as a key, and their grade is stored as the value. Using a hash function, the key is mapped to an index in the table, allowing O(1) time complexity for lookups and updates.",
     "question15": "✅ Answer: A poor hash function causes collisions, leading to longer lookup times (O(n) worst-case). It can also result in clustering, where many keys are assigned to the same index, reducing efficiency."
+  },
+  {
+    "id":"BreathFirstSearch Answer",
+    "question1": "✅ C: A traversal algorithm that explores all neighbors of a node before moving to the next level using a queue",
+    "question2": "✅ C: When you need to find the shortest path in an unweighted graph.",
+    "question3": "✅ D: It explores nodes level by level, guaranteeing the first time it finds a node is via the shortest path",
+    "question4": "✅ B:  Queue and Set, because they ensure nodes are processed in order and avoid revisiting",
+    "question5": "✅ C: Use a queue to explore each level of neighbors from A and stop when G is found",
+    "question6": "Its important to track people you've already searched to prevent infinite loops, especially in graphs with cycles. Without this, you could end up rechecking the same nodes multiple times, wasting time or even causing the algorithm to never finish."
   }
 ]
