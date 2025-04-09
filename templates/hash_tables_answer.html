@@ -1,19 +1,18 @@
 {% extends 'base.html' %}
 
-{% block title %}Breath First Search Answers{% endblock %}
+{% block title %}Hash Tables Answers{% endblock %}
 
 {% block content %}
-  <h1>Breath First Search Quiz Results</h1>
-  <form action="/breathFirstSearchQuiz" method="get">
+  <h1>Hash Tables Quiz Results</h1>
+  <form action="/hash_tables_quiz" method="get">
     <button type="submit">Retake Quiz</button>
   </form>
-  <br>
 
   {% for question, user_answer in user_answers.items() %}
     <fieldset>
       <legend>Question {{ loop.index }}</legend>
       <p>Your Answer: {{ user_answer }}</p>
-      <p> Correct Answer: <strong>{{ breath_first_search[question] }}</strong></p>
+      <p> Correct Answer: <strong>{{ hash_tables_answers[question] }}</strong></p>
     </fieldset>
   {% endfor %}
 {% endblock %}
