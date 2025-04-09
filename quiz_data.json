@@ -41,5 +41,14 @@
     "question4": "✅ B:  Queue and Set, because they ensure nodes are processed in order and avoid revisiting",
     "question5": "✅ C: Use a queue to explore each level of neighbors from A and stop when G is found",
     "question6": "Its important to track people you've already searched to prevent infinite loops, especially in graphs with cycles. Without this, you could end up rechecking the same nodes multiple times, wasting time or even causing the algorithm to never finish."
+  },
+  {
+    "id":"DijkstrasAlgorithm Answer",
+    "question1": "✅ C: Dijkstra’s algorithm finds the shortest path from a starting node to all other nodes in a weighted graph with non-negative edge weights.",
+    "question2": "✅ C: A hash table (or dictionary) is used to keep track of the current shortest known distance to each node.",
+    "question3": "✅ C: Dijkstra’s algorithm starts by initializing the costs table (shortest distances from the start) and parents table (to keep track of the path).",
+    "question4": "✅ C: The algorithm continues until it has found the shortest path to all nodes in the graph.",
+    "question5": "✅ C:  Dijkstra’s algorithm does not work with negative-weight edges because it assumes once a node's shortest path is found, it won't change—which isn't true if negative weights exist.",
+    "question6": "Dijkstra’s algorithm starts by assigning a cost of 0 to the starting node and infinity to all others. It uses the costs table to track the shortest known distance to each node and the parents table to record the best parent to reach that node. It repeatedly visits the unvisited node with the lowest cost, updates the costs of its neighbors if a cheaper path is found, and marks it as visited. This continues until all nodes are visited or the destination node has the shortest path determined."
   }
 ]

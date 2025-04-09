@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Dijkstra's Algorithm Answers{% endblock %}
+
+{% block content %}
+  <h1>Dijkstra's Algorithm Quiz Results</h1>
+  <form action="/dijkstrasAlgoQuiz" method="get">
+    <button type="submit">Retake Quiz</button>
+  </form>
+  <br>
+
+  {% for question, user_answer in user_answers.items() %}
+    <fieldset>
+      <legend>Question {{ loop.index }}</legend>
+      <p>Your Answer: {{ user_answer }}</p>
+      <p> Correct Answer: <strong>{{ dijkstraAlgoAnswers[question] }}</strong></p>
+    </fieldset>
+  {% endfor %}
+{% endblock %}

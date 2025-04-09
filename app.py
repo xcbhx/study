@@ -82,10 +82,20 @@ def breath_first_search():
   user_answers = {key: request.form.get(key, "") for key in ["question1", "question2", "question3", "question4", "question5", "question6"]}
   breath_first_search_answer = next((item for item in quiz_data if item["id"] == "BreathFirstSearch Answer"), None)
   if breath_first_search_answer:
-    return render_template('./breathFirstSearchAnswer.html', user_answers=user_answers, breath_first_search=breath_first_search_answer)
+    return render_template('/breathFirstSearchAnswer.html', user_answers=user_answers, breath_first_search=breath_first_search_answer)
   else:
     return "Breath First Search answers not found.", 404
   
-  
+@app.route('/dijkstrasAlgoQuiz', methods=['GET'])
+def dijkstra_quiz():
+  return render_template('dijkstrasAlgoQuiz.html')
+
+@app.route('/submit_dijkstras_quiz', methods=['POST'])
+def dijkstra_quiz_answer():
+  user_answers = {key: request.form.get(key, "") for key in ["question1", "question2", "question3", "question4", "question5", "question6"]}
+  dijkstra_answers = next((item for item in quiz_data if item["id"] == "DijkstrasAlgorithm Answer"), None)
+  if dijkstra_answers:
+    return render_template('dijkstraAlgoAnswers.html', user_answers=user_answers, dijkstraAlgoAnswers=dijkstra_answers)
+
 if __name__ == '__main__':
   app.run(debug=True)
