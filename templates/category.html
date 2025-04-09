@@ -1,50 +1,23 @@
 {% extends 'base.html' %}
 
-{% block title %}Category - Study{% endblock %}
+{% block title %}Category Quizzes{% endblock %}
 
 {% block content %}
-  <h1>Pick a Category:</h1>
+  <h3>Take a look at the book to review:</h3>
+  <p>
+    <a href="https://edu.anarcho-copy.org/Algorithm/grokking-algorithms-illustrated-programmers-curious.pdf" 
+    target="_blank">Grokking Algorithm</a></p>
+  <h1>Pick a Quiz:</h1>
   <ul>
-    <a href="/binarySearch"><li>Introduction to Algorithms</li></a>
-    <a href="/selectionsort"><li>Selection Sort</li></a>
-    <a href="/recursion"><li>Recursion</li></a>
-    <!-- Dropdown for Quicksort -->
-    <li class="dropdown">
-      <span>Quicksort ▼</span>
-      <ul class="dropdown-content">
-        <li><a href="/quicksortNotes">Review Quicksort</a></li>
-        <li><a href="/quicksortQuiz">Quicksort Quiz</a></li>
-      </ul>
-    </li>
-    <!-- Dropdown for Hash Tables -->
-    <li class="dropdown">
-      <span>Hash Tables ▼</span>
-      <ul class="dropdown-content">
-        <li><a href="/hashTablesNotes">Review Hash Tables</a></li>
-        <li><a href="/hashTablesQuiz">Hash Tables Quiz</a></li>
-      </ul>
-    </li>
-    <!-- Dropdown for Ch.1 - Ch.5 -->
-    <li class="dropdown">
-      <span>Ch.1 - Ch.5 Quiz ▼</span>
-      <ul class="dropdown-content">
-        <li><a href="/ch1_ch5">Ch.1 - Ch.5 Quiz</a></li>
-      </ul>
-    </li>
-    <!-- Dropdown for Ch.1 - Ch.5 -->
-    <li class="dropdown">
-      <span>Breadth-First Search ▼</span>
-      <ul class="dropdown-content">
-        <li><a href="/breathFirstSearchQuiz">Breadth-First Search Quiz</a></li>
-      </ul>
-    </li>
-    <!-- Dropdown for Dijkstra's Algorithm -->
-    <li class="dropdown">
-      <span>Dijkstra's Algorithm ▼</span>
-      <ul class="dropdown-content">
-        <li><a href="/dijkstrasAlgoQuiz">Dijkstra's Algorithm Quiz</a></li>
-      </ul>
-    </li>
+    <a href="#"><li>Introduction to Algorithms</li></a>
+    <a href="/selection_sort"><li>Selection Sort</li></a>
+    <a href="#"><li>Recursion</li></a>
+    <a href="/quicksort_quiz"><li>Quicksort</li></a>
+    <a href="/hash_tables_quiz"><li>Hash Tables</li></a>
+    <a href="/ch1_ch5"><li>Ch.1 - Ch.5 Quiz</li></a>
+    <a href="/breadth_first_search_quiz"><li>Breadth-First Search</li></a>
+    <a href="/dijkstra_algo_quiz"><li>Dijkstra's Algorithm</li></a>
+    <a href="/quicksort_quiz"><li>Quicksort</li></a>
     <a href="#"><li>Greedy Algorithm</li></a>
     <a href="#"><li>Dynamic Programming</li></a>
     <a href="#"><li>K-Nearest Neighbors</li></a>

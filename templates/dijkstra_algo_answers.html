@@ -4,7 +4,7 @@
 
 {% block content %}
   <h1>Dijkstra's Algorithm Quiz Results</h1>
-  <form action="/dijkstrasAlgoQuiz" method="get">
+  <form action="/dijkstra_algo_quiz" method="get">
     <button type="submit">Retake Quiz</button>
   </form>
   <br>
@@ -13,7 +13,7 @@
     <fieldset>
       <legend>Question {{ loop.index }}</legend>
       <p>Your Answer: {{ user_answer }}</p>
-      <p> Correct Answer: <strong>{{ dijkstraAlgoAnswers[question] }}</strong></p>
+      <p> Correct Answer: <strong>{{ dijkstra_algo_answers[question] }}</strong></p>
     </fieldset>
   {% endfor %}
 {% endblock %}
