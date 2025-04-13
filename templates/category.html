@@ -3,45 +3,83 @@
 {% block title %}Category - Study{% endblock %}
 
 {% block content %}
-  <h1>Pick a Category:</h1>
-  <ul>
-    <a href="/binarySearch"><li>Introduction to Algorithms</li></a>
-    <a href="/selectionsort"><li>Selection Sort</li></a>
-    <a href="/recursion"><li>Recursion</li></a>
-    <!-- Dropdown for Quicksort -->
-    <li class="dropdown">
-      <span>Quicksort ▼</span>
-      <ul class="dropdown-content">
-        <li><a href="/quicksortNotes">Review Quicksort</a></li>
-        <li><a href="/quicksortQuiz">Quicksort Quiz</a></li>
-      </ul>
-    </li>
-    <!-- Dropdown for Hash Tables -->
-    <li class="dropdown">
-      <span>Hash Tables ▼</span>
-      <ul class="dropdown-content">
-        <li><a href="/hashTablesNotes">Review Hash Tables</a></li>
-        <li><a href="/hashTablesQuiz">Hash Tables Quiz</a></li>
-      </ul>
-    </li>
-    <!-- Dropdown for Ch.1 - Ch.5 -->
-    <li class="dropdown">
-      <span>Ch.1 - Ch.5 Quiz ▼</span>
-      <ul class="dropdown-content">
-        <li><a href="/ch1_ch5">Ch.1 - Ch.5 Quiz</a></li>
-      </ul>
-    </li>
-    <!-- Dropdown for Ch.1 - Ch.5 -->
-    <li class="dropdown">
-      <span>Breadth-First Search ▼</span>
-      <ul class="dropdown-content">
-        <li><a href="/breathFirstSearchQuiz">Breadth-First Search Quiz</a></li>
-      </ul>
-    </li>
-    <a href="#"><li>Dijkstra's Algorithm</li></a>
-    <a href="#"><li>Greedy Algorithm</li></a>
-    <a href="#"><li>Dynamic Programming</li></a>
-    <a href="#"><li>K-Nearest Neighbors</li></a>
-  </ul>
+  <h1 class="text-2xl font-bold mb-4">Pick a Category:</h1>
+  <ul class="list-none p-0 space-y-2">
+    <a href="/binarySearch" class="block">
+      <li class="p-3 cursor-pointer hover:bg-gray-200">Introduction to Algorithms</li>
+    </a>
+    <a href="/selectionsort" class="block">
+      <li class="p-3 cursor-pointer hover:bg-gray-200">Selection Sort</li>
+    </a>
+    <a href="/recursion" class="block">
+      <li class="p-3 cursor-pointer hover:bg-gray-200">Recursion</li>
+    </a>
 
+    <!-- Dropdown for Quicksort -->
+    <li>
+      <details class="group cursor-pointer">
+        <summary class="p-3 hover:bg-gray-200 list-none [&::-webkit-details-marker]:hidden" style="cursor: pointer !important;">Quicksort</summary>
+        <ul class="bg-white border border-gray-300 min-w-[160px] list-none p-0 mt-1">
+          <li class="py-3 px-4 border-b border-gray-200">
+            <a href="/quicksortNotes" class="block text-black no-underline">Review Quicksort</a>
+          </li>
+          <li class="py-3 px-4">
+            <a href="/quicksortQuiz" class="block text-black no-underline">Quicksort Quiz</a>
+          </li>
+        </ul>
+      </details>
+    </li>
+
+    <!-- Dropdown for Hash Tables -->
+    <li>
+      <details class="group cursor-pointer">
+        <summary class="p-3 hover:bg-gray-200 list-none [&::-webkit-details-marker]:hidden" style="cursor: pointer !important;">Hash Tables</summary>
+        <ul class="bg-white border border-gray-300 min-w-[160px] list-none p-0 mt-1">
+          <li class="py-3 px-4 border-b border-gray-200">
+            <a href="/hashTablesNotes" class="block text-black no-underline">Review Hash Tables</a>
+          </li>
+          <li class="py-3 px-4">
+            <a href="/hashTablesQuiz" class="block text-black no-underline">Hash Tables Quiz</a>
+          </li>
+        </ul>
+      </details>
+    </li>
+
+    <!-- Dropdown for Ch.1 - Ch.5 Quiz -->
+    <li>
+      <details class="group cursor-pointer">
+        <summary class="p-3 hover:bg-gray-200 list-none [&::-webkit-details-marker]:hidden" style="cursor: pointer !important;">Ch.1 - Ch.5 Quiz</summary>
+        <ul class="bg-white border border-gray-300 min-w-[160px] list-none p-0 mt-1">
+          <li class="py-3 px-4">
+            <a href="/ch1_ch5" class="block text-black no-underline">Ch.1 - Ch.5 Quiz</a>
+          </li>
+        </ul>
+      </details>
+    </li>
+
+    <!-- Dropdown for Breadth-First Search -->
+    <li>
+      <details class="group cursor-pointer">
+        <summary class="p-3 hover:bg-gray-200 list-none [&::-webkit-details-marker]:hidden" style="cursor: pointer !important;">Breadth-First Search</summary>
+        <ul class="bg-white border border-gray-300 min-w-[160px] list-none p-0 mt-1">
+          <li class="py-3 px-4">
+            <a href="/breathFirstSearchQuiz" class="block text-black no-underline">Breadth-First Search Quiz</a>
+          </li>
+        </ul>
+      </details>
+    </li>
+
+    <a href="#" class="block">
+      <li class="p-3 cursor-pointer hover:bg-gray-200">Dijkstra's Algorithm</li>
+    </a>
+    <a href="#" class="block">
+      <li class="p-3 cursor-pointer hover:bg-gray-200">Greedy Algorithm</li>
+    </a>
+    <a href="#" class="block">
+      <li class="p-3 cursor-pointer hover:bg-gray-200">Dynamic Programming</li>
+    </a>
+    <a href="#" class="block">
+      <li class="p-3 cursor-pointer hover:bg-gray-200">K-Nearest Neighbors</li>
+    </a>
+  </ul>
 {% endblock %}
