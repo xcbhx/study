@@ -8,7 +8,7 @@
     "question5": "The choice of pivot directly impacts Quicksort's efficiency. If the pivot results in balanced partitions, the algorithm performs closer to its average time complexity of O(n log n). Poor pivot selection (e.g., always choosing the first or last element) can lead to O(n²) time complexity. Strategies to improve pivot selection include choosing the median of three elements (first, middle, and last) or selecting a random pivot to reduce the chance of worst-case performance."
   },
   {
-    "id":"HashTable Answer",
+    "id":"Hash Table Answer",
     "question1": "✅ B: Hash tables provide O(1) average time complexity for lookups, insertions, and deletions, making them extremely efficient for quick data retrieval.",
     "question2": "✅ C: A hash collision occurs when two keys hash to the same index in a hash table. This can be resolved using methods like chaining (linked lists at each index) or open addressing (probing for the next available slot).",
     "question3": "✅ C: The worst-case time complexity is O(n) when all keys hash to the same index (causing a long chain in separate chaining or many probes in open addressing). However, with a good hash function and low load factor, the average time remains O(1).",
@@ -34,12 +34,21 @@
     "question15": "✅ Answer: A poor hash function causes collisions, leading to longer lookup times (O(n) worst-case). It can also result in clustering, where many keys are assigned to the same index, reducing efficiency."
   },
   {
-    "id":"BreathFirstSearch Answer",
+    "id":"Breadth-First Search Answer",
     "question1": "✅ C: A traversal algorithm that explores all neighbors of a node before moving to the next level using a queue",
     "question2": "✅ C: When you need to find the shortest path in an unweighted graph.",
     "question3": "✅ D: It explores nodes level by level, guaranteeing the first time it finds a node is via the shortest path",
-    "question4": "✅ B:  Queue and Set, because they ensure nodes are processed in order and avoid revisiting",
+    "question4": "✅ B: Queue and Set, because they ensure nodes are processed in order and avoid revisiting",
     "question5": "✅ C: Use a queue to explore each level of neighbors from A and stop when G is found",
     "question6": "Its important to track people you've already searched to prevent infinite loops, especially in graphs with cycles. Without this, you could end up rechecking the same nodes multiple times, wasting time or even causing the algorithm to never finish."
+  },
+  {
+    "id":"Dijkstras Algorithm Answer",
+    "question1": "✅ C: Dijkstra’s algorithm finds the shortest path from a starting node to all other nodes in a weighted graph with non-negative edge weights.",
+    "question2": "✅ C: A hash table (or dictionary) is used to keep track of the current shortest known distance to each node.",
+    "question3": "✅ C: Dijkstra’s algorithm starts by initializing the costs table (shortest distances from the start) and parents table (to keep track of the path).",
+    "question4": "✅ C: The algorithm continues until it has found the shortest path to all nodes in the graph.",
+    "question5": "✅ C:  Dijkstra’s algorithm does not work with negative-weight edges because it assumes once a node's shortest path is found, it won't change—which isn't true if negative weights exist.",
+    "question6": "Dijkstra’s algorithm starts by assigning a cost of 0 to the starting node and infinity to all others. It uses the costs table to track the shortest known distance to each node and the parents table to record the best parent to reach that node. It repeatedly visits the unvisited node with the lowest cost, updates the costs of its neighbors if a cheaper path is found, and marks it as visited. This continues until all nodes are visited or the destination node has the shortest path determined."
   }
 ]
