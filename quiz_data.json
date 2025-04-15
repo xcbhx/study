@@ -50,5 +50,14 @@
     "question4": "✅ C: The algorithm continues until it has found the shortest path to all nodes in the graph.",
     "question5": "✅ C:  Dijkstra’s algorithm does not work with negative-weight edges because it assumes once a node's shortest path is found, it won't change—which isn't true if negative weights exist.",
     "question6": "Dijkstra’s algorithm starts by assigning a cost of 0 to the starting node and infinity to all others. It uses the costs table to track the shortest known distance to each node and the parents table to record the best parent to reach that node. It repeatedly visits the unvisited node with the lowest cost, updates the costs of its neighbors if a cheaper path is found, and marks it as visited. This continues until all nodes are visited or the destination node has the shortest path determined."
+  },
+  {
+    "id":"Gready Algorithm Answer",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": ""
   }
 ]
