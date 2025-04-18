@@ -105,6 +105,23 @@ def dijkstra_quiz_answer():
     return render_template('dijkstra_algo_answers.html', user_answers=user_answers, dijkstra_algo_answers=dijkstra_answers)
   else:
     return "Dijkstra's Algorithm answers not found.", 404
+  
+
+@app.route('/greedy_algo_quiz', methods=['GET'])
+def greedy_quiz():
+  return render_template('greedy_algo_quiz.html')
+
+
+@app.route('/submit_greedy_quiz', methods=['POST'])
+def greedy_quiz_answer():
+  user_answers = collect_answers([
+    "question1", "question2", "question3", "question4", "question5", "question6"
+  ])
+  greedy_answers = next((item for item in quiz_data if item["id"] == "Greedy Algorithm Answer"), None)
+  if greedy_answers:
+    return render_template('greedy_algo_answers.html', user_answers=user_answers, greedy_algo_answers=greedy_answers)
+  else:
+    return "Greedy Algorithm answers not found.", 404
 
 if __name__ == '__main__':
   app.run(debug=True)
