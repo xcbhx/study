@@ -52,12 +52,12 @@
     "question6": "Dijkstra’s algorithm starts by assigning a cost of 0 to the starting node and infinity to all others. It uses the costs table to track the shortest known distance to each node and the parents table to record the best parent to reach that node. It repeatedly visits the unvisited node with the lowest cost, updates the costs of its neighbors if a cheaper path is found, and marks it as visited. This continues until all nodes are visited or the destination node has the shortest path determined."
   },
   {
-    "id":"Gready Algorithm Answer",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": ""
+    "id":"Greedy Algorithm Answer",
+    "question1": "✅ Always choose the option that looks best at the moment. Explanation: Greedy algorithms work by making the best local choice at each step, hoping that these choices lead to the best overall (global) solution. ",
+    "question2": "✅ Set cover problem. Explanation: The set cover problem is a common example of a problem approached using greedy logic — picking the set (e.g., a radio station) that covers the most uncovered items (e.g., states) until everything is covered.",
+    "question3": "✅ They don't always give the optimal solution. Explanation: Greedy algorithms don’t look ahead or reconsider choices, so they may miss the globally best solution even though they’re fast and easy to implement",
+    "question4": "✅ A group of states a radio station can cover. Explanation: Each station in the book’s example is a radio station, and it can broadcast to a set of states. The goal is to choose the fewest stations that together reach all the needed states.",
+    "question5": "✅ When the problem has the greedy-choice property. Explanation: The greedy-choice property means that local choices lead to a global optimum — which is exactly what greedy algorithms depend on to be correct. ",
+    "question6": "✅ The greedy strategy in the set cover problem selects the station that covers the largest number of uncovered states at each step. It continues until all states are covered. This approach doesn’t guarantee the optimal solution, but it often gets close because it reduces the uncovered portion of the problem as quickly as possible. It works well in practice for large problems where finding the perfect solution would take too long (NP-complete problems)"
   }
 ]

@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+
+{% block title %}Greedy Algorithm{% endblock %}
+
+{% block content %}
+  <form action="/submit_greedy_quiz" method="post">
+    <fieldset>
+      <legend>1. What is the key principle behind greedy algorithms?</legend>
+      <label for="question1_a">
+        <input type="radio" name="question1" value="Recursively divide and conquer" id="question1_a">
+          Recursively divide and conquer
+      </label>
+      <br />
+      <label for="question1_b">
+        <input type="radio" name="question1" value="Always choose the option that looks best at the moment" id="question1_b">
+          Always choose the option that looks best at the moment
+        </label>
+      <br />
+      <label for="question1_c">
+        <input type="radio" name="question1" value="Try every possible solution" id="question1_c">
+          Try every possible solution
+      </label>
+      <br />
+      <label for="question1_d">
+        <input type="radio" name="question1" value="Work backwards from the answer" id="question1_d">
+          Work backwards from the answer
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>2. Which of the following is a classic example of a problem that can be solved using a greedy algorithm?</legend>
+      <label for="question2_a">
+        <input type="radio" name="question2" value="Binary search" id="question2_a">
+          Binary search
+      </label>
+      <br />
+      <label for="question2_b">
+        <input type="radio" name="question2" value="Selection sort" id="question2_b">
+          Selection sort
+      </label>
+      <br />
+      <label for="question2_c">
+        <input type="radio" name="question2" value="Dijkstra’s shortest path)" id="question2_c">
+          Dijkstra’s shortest path
+      </label>
+      <br />
+      <label for="question2_d">
+        <input type="radio" name="question2" value="Set cover problem" id="question2_d">
+          Set cover problem
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>3. What is a common drawback of greedy algorithms?</legend>
+      <label for="question3_a">
+        <input type="radio" name="question3" value="They require recursion" id="question3_a">
+          They require recursion
+      </label>
+      <br />
+      <label for="question3_b">
+        <input type="radio" name="question3" value="They always give the worst solution" id="question3_b">
+          They always give the worst solution
+      </label>
+      <br />
+      <label for="question3_c">
+        <input type="radio" name="question3" value="They don't always give the optimal solution" id="question3_c">
+          They don't always give the optimal solution
+      </label>
+      <br />
+      <label for="question3_d">
+        <input type="radio" name="question3" value="They use too much memory" id="question3_d">
+          They use too much memory
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>4. In the set cover problem discussed in the book, what does each "station" represent?</legend>
+      <label for="question4_a">
+        <input type="radio" name="question4" value="A possible solution" id="question4_a">
+          A possible solution
+      </label>
+      <br />
+      <label for="question4_b">
+        <input type="radio" name="question4" value="A group of states a radio station can cover" id="question4_b">
+          A group of states a radio station can cover
+      </label>
+      <br />
+      <label for="question4_c">
+        <input type="radio" name="question4" value="A list of algorithms" id="question4_c">
+          A list of algorithms
+      </label>
+      <br />
+      <label for="question4_d">
+        <input type="radio" name="question4" value="A type of recursion" id="question4_d">
+          A type of recursion
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>5. When is a greedy algorithm most likely to give the correct (optimal) solution?</legend>
+      <label for="question5_a">
+        <input type="radio" name="question5" value="When the problem is sorted" id="question5_a">
+          When the problem is sorted
+      </label>
+      <br />
+      <label for="question5_b">
+        <input type="radio" name="question5" value="When the graph is directed" id="question5_b">
+          When the graph is directed
+      </label>
+      <br />
+      <label for="question5_c">
+        <input type="radio" name="question5" value="When the problem has the greedy-choice property" id="question5_c">
+          When the problem has the greedy-choice property
+      </label>
+      <br />
+      <label for="question5_d">
+        <input type="radio" name="question5" value="When the input size is small" id="question5_d">
+          When the input size is small
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>6. Explain the strategy of the greedy algorithm used in the set cover problem. Why does it work reasonably well even if it doesn’t always give the perfect solution?</legend>
+      <label for="question6">
+        <textarea name="question6" id="question6" rows="4" cols="50" placeholder="Explain Your Answer"></textarea>
+    </label>
+    </fieldset>
+    <br />
+    <button type="submit">Submit</button>
+  </form>
+
+{% endblock %}
