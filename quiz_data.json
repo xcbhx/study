@@ -59,5 +59,14 @@
     "question4": "✅ A group of states a radio station can cover. Explanation: Each station in the book’s example is a radio station, and it can broadcast to a set of states. The goal is to choose the fewest stations that together reach all the needed states.",
     "question5": "✅ When the problem has the greedy-choice property. Explanation: The greedy-choice property means that local choices lead to a global optimum — which is exactly what greedy algorithms depend on to be correct. ",
     "question6": "✅ The greedy strategy in the set cover problem selects the station that covers the largest number of uncovered states at each step. It continues until all states are covered. This approach doesn’t guarantee the optimal solution, but it often gets close because it reduces the uncovered portion of the problem as quickly as possible. It works well in practice for large problems where finding the perfect solution would take too long (NP-complete problems)"
+  },
+  {
+    "id":"Dynamic Programming Answer",
+    "question1": "✅ Subproblems and builds up to solving the big problem.",
+    "question2": "✅ Subproblems that are solved multiple times if not approached carefully.",
+    "question3": "✅ To avoid redundant computations and improve efficiency.",
+    "question4": "✅ Optimize something given a constraint.",
+    "question5": "✅ To store the intermediate results or solutions to subproblems.",
+    "question6": "✅ The general strategy behind dynamic programming involves breaking down a complex problem into a collection of smaller subproblems. Instead of solving the same subproblems repeatedly, dynamic programming solves each subproblem only once and stores its solution, typically in a table or grid. These stored solutions are then looked up and reused when needed to solve larger subproblems, eventually leading to the solution of the original problem."
   }
 ]
