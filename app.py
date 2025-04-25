@@ -122,6 +122,21 @@ def greedy_quiz_answer():
     return render_template('greedy_algo_answers.html', user_answers=user_answers, greedy_algo_answers=greedy_answers)
   else:
     return "Greedy Algorithm answers not found.", 404
+  
+@app.route('/dynamic_programming_quiz', methods=['GET'])
+def dynamic_quiz():
+  return render_template('dynamic_programming_quiz.html')
+
+@app.route('/submit_dynamic_quiz', methods=['POST'])
+def dynamic_quiz_answer():
+  user_answers = collect_answers([
+    "question1", "question2", "question3", "question4", "question5", "question6"
+  ])
+  dynamic_answers = next((item for item in quiz_data if item["id"] == "Dynamic Programming Answer"), None)
+  if dynamic_answers:
+    return render_template('dynamic_programming_answers.html', user_answers=user_answers, dynamic_programming_answers=dynamic_answers)
+  else:
+    return "Dynamic Programming answers not found.", 404
 
 if __name__ == '__main__':
   app.run(debug=True)

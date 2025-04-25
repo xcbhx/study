@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+
+{% block title %}Dynamic Programming{% endblock %}
+
+{% block content %}
+  <form action="/submit_dynamic_quiz" method="post">
+    <fieldset>
+      <legend>1. According to the chapter, dynamic programming starts by solving:</legend>
+      <label for="question1_a">
+        <input type="radio" name="question1" value="The largest instance of the problem first." id="question1_a">
+        The largest instance of the problem first.
+      </label>
+      <br />
+      <label for="question1_b">
+        <input type="radio" name="question1" value="A simplified version of the problem with fewer constraints." id="question1_b">
+        A simplified version of the problem with fewer constraints.
+        </label>
+      <br />
+      <label for="question1_c">
+        <input type="radio" name="question1" value="Subproblems and builds up to solving the big problem." id="question1_c">
+        Subproblems and builds up to solving the big problem.
+      </label>
+      <br />
+      <label for="question1_d">
+        <input type="radio" name="question1" value="Only the most critical subproblems that directly impact the final answer." id="question1_d">
+        Only the most critical subproblems that directly impact the final answer.
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>2. Dynamic programming is powerful because it can solve subproblems and use those answers to solve the big problem. This approach is most effective for problems that have:</legend>
+      <label for="question2_a">
+        <input type="radio" name="question2" value="A clear mathematical formula for the final solution." id="question2_a">
+        A clear mathematical formula for the final solution.
+      </label>
+      <br />
+      <label for="question2_b">
+        <input type="radio" name="question2" value="Subproblems that need to be solved independently." id="question2_b">
+        Subproblems that need to be solved independently.
+      </label>
+      <br />
+      <label for="question2_c">
+        <input type="radio" name="question2" value="Subproblems that are solved multiple times if not approached carefully." id="question2_c">
+        Subproblems that are solved multiple times if not approached carefully.
+      </label>
+      <br />
+      <label for="question2_d">
+        <input type="radio" name="question2" value="Solutions that depend on future, larger subproblems." id="question2_d">
+        Solutions that depend on future, larger subproblems.
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>3. When solving a problem using dynamic programming, what is the primary purpose of storing the solutions to subproblems?</legend>
+      <label for="question3_a">
+        <input type="radio" name="question3" value="To make the code easier to read and understand." id="question3_a">
+        To make the code easier to read and understand.
+      </label>
+      <br />
+      <label for="question3_b">
+        <input type="radio" name="question3" value=" To reduce the amount of memory used by the algorithm." id="question3_b">
+        To reduce the amount of memory used by the algorithm.
+      </label>
+      <br />
+      <label for="question3_c">
+        <input type="radio" name="question3" value="To avoid redundant computations and improve efficiency." id="question3_c">
+        To avoid redundant computations and improve efficiency.
+      </label>
+      <br />
+      <label for="question3_d">
+        <input type="radio" name="question3" value="To allow for parallel processing of different subproblems." id="question3_d">
+        To allow for parallel processing of different subproblems.
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>4. Dynamic programming is particularly useful when you are trying to:</legend>
+      <label for="question4_a">
+        <input type="radio" name="question4" value="Find any possible solution to a problem quickly." id="question4_a">
+        Find any possible solution to a problem quickly.
+      </label>
+      <br />
+      <label for="question4_b">
+        <input type="radio" name="question4" value="Optimize something given a constraint." id="question4_b">
+        Optimize something given a constraint.
+      </label>
+      <br />
+      <label for="question4_c">
+        <input type="radio" name="question4" value="Solve problems where the number of possible solutions is small." id="question4_c">
+        Solve problems where the number of possible solutions is small.
+      </label>
+      <br />
+      <label for="question4_d">
+        <input type="radio" name="question4" value="Break down a problem into completely unrelated parts." id="question4_d">
+        Break down a problem into completely unrelated parts.
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>5. A key element in many dynamic programming solutions is the use of a grid. What is the primary purpose of this grid?</legend>
+      <label for="question5_a">
+        <input type="radio" name="question5" value="To visually represent the problem's constraints." id="question5_a">
+        To visually represent the problem's constraints.
+      </label>
+      <br />
+      <label for="question5_b">
+        <input type="radio" name="question5" value="To store the intermediate results or solutions to subproblems." id="question5_b">
+        To store the intermediate results or solutions to subproblems.
+      </label>
+      <br />
+      <label for="question5_c">
+        <input type="radio" name="question5" value="To define the order in which subproblems should be solved." id="question5_c">
+        To define the order in which subproblems should be solved.
+      </label>
+      <br />
+      <label for="question5_d">
+        <input type="radio" name="question5" value="To track the overall progress of the algorithm." id="question5_d">
+        To track the overall progress of the algorithm.
+      </label>
+    </fieldset>
+    <br />
+    <fieldset>
+      <legend>6. Explain the general strategy behind solving a problem using dynamic programming. What are the key steps involved?</legend>
+      <label for="question6">
+        <textarea name="question6" id="question6" rows="4" cols="50" placeholder="Explain Your Answer"></textarea>
+    </label>
+    </fieldset>
+    <br />
+    <button type="submit">Submit</button>
+  </form>
+
+{% endblock %}
+
+
+
