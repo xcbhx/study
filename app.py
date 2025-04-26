@@ -139,4 +139,4 @@ def dynamic_quiz_answer():
     return "Dynamic Programming answers not found.", 404
 
 if __name__ == '__main__':
-  app.run(debug=True)
+  app.run(debug=True, port=5001)

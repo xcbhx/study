@@ -3,19 +3,30 @@
 {% block title %}Home - Study With Me{% endblock %}
 
 {% block content %}
-  <h1 class="text-2xl font-bold mb-4">Pick a Topic:</h1>
-  <ul class="list-none p-0 space-y-2">
-    <a href="/category" class="block">
-      <li class="p-[10px] cursor-pointer hover:bg-gray-200">Grokking Algorithms Book</li>
-    </a>
-    <a href="#" class="block">
-      <li class="p-[10px] cursor-pointer hover:bg-gray-200">Object-Oriented Programming</li>
-    </a>
-    <a href="#" class="block">
-      <li class="p-[10px] cursor-pointer hover:bg-gray-200">React</li>
-    </a>
-    <a href="#" class="block">
-      <li class="p-[10px] cursor-pointer hover:bg-gray-200">SQL</li>
-    </a>
-  </ul>
+  <h1 class="text-center mb-8 text-4xl">Welcome to Study With Me!</h1>
+
+  <div class="flex flex-col items-center">
+    <p class="text-justify md:text-left max-w-md">
+      This page was created to help anyone who's reading <a href="https://edu.anarcho-copy.org/Algorithm/grokking-algorithms-illustrated-programmers-curious.pdf" class="font-medium text-blue-600 underline dark:text-blue-500 hover:no-underline" data-popover-target="popover-image" target="_blank">Grokking Algorithms</a> 
+      build a strong understanding of the most frequently used algorithms.
+      Here, you'll find simple, easy-to-follow breakdowns that show how each algorithm works and where it's used.<br><br>
+      At the end of each chapter, you can pause, test your knowledge, and move forward with confidence—knowing you've truly mastered the material so far.
+    </p>
+    <a href="/category"><button type="button" class="mt-2 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Let's Get Started!</button></a>
+  </div>
+
+  <div id="popover-image" role="tooltip" class="absolute z-10 invisible inline-block text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-xs opacity-0 w-96 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600">
+    <div class="grid grid-cols-5">
+        <div class="col-span-3 p-3">
+            <div class="space-y-2">
+                <h3 class="font-semibold text-gray-900 dark:text-white">Grokking Algorithms</h3>
+                <p>Coming Soon!</p>
+    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+  </svg></a>
+          </div>
+        </div>
+        <img src="static/images/grokking_algorithm_book.png" class="h-full col-span-2" alt="Grokking Algorithm Book Cover" />
+    </div>
+    <div data-popper-arrow></div>
+</div>
 {% endblock %}
