@@ -68,5 +68,14 @@
     "question4": "✅ Optimize something given a constraint.",
     "question5": "✅ To store the intermediate results or solutions to subproblems.",
     "question6": "✅ The general strategy behind dynamic programming involves breaking down a complex problem into a collection of smaller subproblems. Instead of solving the same subproblems repeatedly, dynamic programming solves each subproblem only once and stores its solution, typically in a table or grid. These stored solutions are then looked up and reused when needed to solve larger subproblems, eventually leading to the solution of the original problem."
+  },
+  {
+    "id":"K-nearest Neighbors Answer",
+    "question1": "✅ KNN is a method for both categorizing items (classification) and predicting numerical values (regression) by examining nearby data points.",
+    "question2": "✅ Convert each item into a set of numerical measurements or features.",
+    "question3": "✅ Feature extraction.",
+    "question4": "✅ Measurable characteristics or attributes that effectively represent the data.",
+    "question5": "✅ Because the measure of similarity between data points directly depends on the features used for comparison; poor features can lead to inaccurate results.",
+    "question6": "✅ Determining the proximity or similarity between data points is crucial for the K-Nearest Neighbors algorithm. The algorithm predicts the category or value of a new data point by examining the categories or values of the most similar, previously seen data points. This measure of closeness allows the algorithm to infer that similar data points are likely to have similar outcomes."
   }
 ]

@@ -138,5 +138,20 @@ def dynamic_quiz_answer():
   else:
     return "Dynamic Programming answers not found.", 404
 
+@app.route('/k_nearest_neighbors_quiz', methods=['GET'])
+def k_nearest_neighbors_quiz():
+  return render_template('k_nearest_neighbors_quiz.html')
+
+@app.route('/submit_k_nearest_neighbors_quiz', methods=['POST'])
+def k_nearest_neighbors_quiz_answer():
+  user_answers = collect_answers([
+    "question1", "question2", "question3", "question4", "question5", "question6"
+  ])
+  k_nearest_neighbors_answers = next((item for item in quiz_data if item["id"] == "K-nearest Neighbors Answer"), None)
+  if k_nearest_neighbors_answers:
+    return render_template('k_nearest_neighbors_answers.html', user_answers=user_answers, k_nearest_neighbors_answers=k_nearest_neighbors_answers)
+  else:
+    return "k-Nearest neighbors answers not found.", 404
+
 if __name__ == '__main__':
   app.run(debug=True, port=5001)
