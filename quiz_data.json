@@ -77,5 +77,25 @@
     "question4": "✅ Measurable characteristics or attributes that effectively represent the data.",
     "question5": "✅ Because the measure of similarity between data points directly depends on the features used for comparison; poor features can lead to inaccurate results.",
     "question6": "✅ Determining the proximity or similarity between data points is crucial for the K-Nearest Neighbors algorithm. The algorithm predicts the category or value of a new data point by examining the categories or values of the most similar, previously seen data points. This measure of closeness allows the algorithm to infer that similar data points are likely to have similar outcomes."
+  },
+    {
+    "id":"ch6_ch10 Answer",
+    "question1": "✅ Queue",
+    "question2": "✅ A queue is FIFO (First In, First Out), while a stack is LIFO (Last In, First Out)",
+    "question3": "✅ Graphs with non-negative edge weights",
+    "question4": "✅ It stores the current shortest known distance to each node",
+    "question5": "✅ Always make the locally optimal choice at each step",
+    "question6": "✅ They are always slower than other approaches",
+    "question7": "✅ It solves and stores subproblems to avoid repeating work",
+    "question8": "✅ A grid or table",
+    "question9": "✅ Use nearby data points to predict the category or value of a new item",
+    "question10": "✅ Because KNN uses those features to measure distance and similarity",
+    "question11": "✅ BFS uses a queue to explore nodes level by level, starting from the source node. It visits all neighbors of a node before moving to the next layer of neighbors. Because it checks nodes in order of distance, the first time it reaches a node is always via the shortest path in an unweighted graph. This is why it guarantees the shortest path.",
+    "question12": "✅ The costs table keeps track of the shortest known distance from the starting node to every other node. The parents table records the previous node for each path, so you can reconstruct the full shortest path at the end. As the algorithm runs, it updates both tables whenever it finds a cheaper path to a node.",
+    "question13": "✅ Greedy algorithms work well for problems where making the best local choice at each step leads to a globally optimal solution. For example, in the coin change problem (using the fewest coins), if the coin values are set up properly, choosing the largest coin that fits works. This strategy works when the problem has the greedy-choice property.",
+    "question14": "✅ Dynamic programming breaks a big problem into smaller overlapping subproblems. It solves each subproblem once and stores the result in a table (usually a grid), then reuses those results instead of recalculating them. This avoids redundant work and makes the algorithm much more efficient, especially for problems with repeated calculations.",
+    "question15": "✅ In KNN, features are the measurable characteristics used to compare data points. Good features accurately reflect what makes items similar or different. If the features aren’t relevant or meaningful, the distance calculations will be off, and the algorithm may choose the wrong neighbors—leading to bad predictions."
+
+
   }
 ]

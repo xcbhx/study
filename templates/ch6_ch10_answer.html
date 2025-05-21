@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Ch.6 - Ch.10 Answers{% endblock %}
+
+{% block content %}
+  <h1>Ch.6 -Ch.10 Quiz Results</h1>
+  <form action="/ch6_ch10" method="get">
+    <button type="submit">Retake Quiz</button>
+  </form>
+
+  {% for question, user_answer in user_answers.items() %}
+    <fieldset>
+      <legend>Question {{ loop.index }}</legend>
+      <p>Your Answer: {{ user_answer }}</p>
+      <p> Correct Answer: <strong>{{ ch6_ch10_answer[question] }}</strong></p>
+    </fieldset>
+  {% endfor %}
+{% endblock %}
