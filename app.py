@@ -152,6 +152,23 @@ def k_nearest_neighbors_quiz_answer():
     return render_template('k_nearest_neighbors_answers.html', user_answers=user_answers, k_nearest_neighbors_answers=k_nearest_neighbors_answers)
   else:
     return "k-Nearest neighbors answers not found.", 404
+  
+@app.route('/ch6_ch10', methods=['GET'])
+def ch6_ch10_quiz():
+  return render_template('ch6_ch10.html')
+
+@app.route('/submit_ch6_ch10_quiz', methods=['POST'])
+def ch6_ch10():
+  user_answers = collect_answers([
+    "question1", "question2", "question3", "question4", "question5", "question6", 
+    "question7", "question8", "question9", "question10", "question11", "question12", 
+    "question13", "question14", "question15"
+  ])
+  ch6_ch10_correct_answer = next((item for item in quiz_data if item["id"] == "ch6_ch10 Answer"), None)
+  if ch6_ch10_correct_answer:
+    return render_template('ch6_ch10_answer.html', user_answers=user_answers, ch6_ch10_answer=ch6_ch10_correct_answer)
+  else:
+    return "Ch.6 - Ch.10 answers not found.", 404
 
 if __name__ == '__main__':
   app.run(debug=True, port=5001)
