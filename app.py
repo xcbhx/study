@@ -23,6 +23,14 @@ def home():
 def category():
   return render_template('category.html')
 
+@app.route('/intro_algo_quiz', methods=['GET'])
+def intro_algorithms_quiz():
+  return render_template('intro_to_algo_quiz.html')
+
+@app.route('/submit_intro_algo_quiz', methods=['GET', 'POST'])
+def intro_algorithms_answers():
+  return render_template('intro_to_algo_answer.html')
+
 @app.route('/selection_sort', methods=['GET', 'POST'])
 def selection_sort():
   if request.method == 'POST':
