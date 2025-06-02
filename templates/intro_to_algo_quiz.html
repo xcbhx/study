@@ -1,0 +1,235 @@
+{% extends "base.html" %}
+
+{% block title %}Introduction to Algorithms Quiz{% endblock %}
+
+{% block content %}
+  <h1 class="text-4xl text-center font-bold dark:text-white mb-8">
+    Introduction to Algorithms Quiz
+  </h1>
+
+  <form action="/submit_intro_algo_quiz" method="post">
+    <fieldset>
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        1. How many steps (at most) does binary search need to find an item in a list of 128 elements?
+      </legend>
+
+      <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question1_a">
+              <input type="radio" name="question1" value="128" id="question1_a">
+              128
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question1_b">
+              <input type="radio" name="question1" value="64" id="question1_b">
+              64
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question1_c">
+              <input type="radio" name="question1" value="7" id="question1_c">
+              7
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question1_d">
+              <input type="radio" name="question1" value="10" id="question1_d">
+              10
+            </label>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+    <br />
+    <fieldset>
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        2. What is the time complexity of simple (linear) search?
+      </legend>
+
+      <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question2_a">
+              <input type="radio" name="question2" value="O(log n)" id="question2_a">
+              O(log n)
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question2_b">
+              <input type="radio" name="question2" value="O(n²)" id="question2_b">
+              O(n²)
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question2_c">
+              <input type="radio" name="question2" value="O(n)" id="question2_c">
+              O(n)
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question2_d">
+              <input type="radio" name="question2" value="O(1)" id="question2_d">
+              O(1)
+            </label>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+    <br />
+    <fieldset>
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        3. Binary search only works on:
+      </legend>
+
+      <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question3_a">
+              <input type="radio" name="question3" value="Unsorted lists" id="question3_a">
+              Unsorted lists 
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question3_b">
+              <input type="radio" name="question3" value="Sorted lists" id="question3_b">
+              Sorted lists
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question3_c">
+              <input type="radio" name="question3" value="Lists with unique elements" id="question3_c">
+              Lists with unique elements
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question3_d">
+              <input type="radio" name="question3" value="Lists without duplicates" id="question3_d">
+              Lists without duplicates
+            </label>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+    <br />
+    <fieldset>
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        4. If you double the size of the list, how many more steps does binary search add?
+      </legend>
+
+      <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question4_a">
+              <input type="radio" name="question4" value="One" id="question4_a">
+              One
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question4_b">
+              <input type="radio" name="question4" value="Two" id="question4_b">
+              Two
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question4_c">
+              <input type="radio" name="question4" value="Double the steps" id="question4_c">
+              Double the steps
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question4_d">
+              <input type="radio" name="question4" value="None" id="question4_d">
+              None
+            </label>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+    <br />
+    <fieldset>
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        5. Which of the following is NOT true about binary search?
+      </legend>
+
+      <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question5_a">
+              <input type="radio" name="question5" value=" It eliminates half the list each time" id="question5_a">
+              It eliminates half the list each time 
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question5_b">
+              <input type="radio" name="question5" value="It’s efficient for large datasets " id="question5_b">
+              It’s efficient for large datasets 
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question5_c">
+              <input type="radio" name="question5" value="It always checks every item" id="question5_c">
+              It always checks every item
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question5_d">
+              <input type="radio" name="question5" value="It only works on sorted data" id="question5_d">
+              It only works on sorted data
+            </label>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+    <br />
+    <fieldset>
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        6. Why is binary search considered more efficient than simple search for large datasets? Use an example comparing both.
+      </legend>
+
+      <label for="question6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        <textarea name="question6" id="question6" rows="4" cols="50" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Explain Your Answer">
+        </textarea>
+      </label>
+    </fieldset>
+    <br />
+    <button type="submit" class="mt-2 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Submit</button>
+  </form>
+
+{% endblock %}

@@ -1,5 +1,14 @@
 [
   {
+    "id":"Intro Algorithms Answer",
+    "question1": "✅ 7",
+    "question2": "✅ O(n)",
+    "question3": "✅ Sorted lists",
+    "question4": "✅ One. (Because each new power of 2 adds one step to log₂(n))",
+    "question5": "✅ It always checks every item",
+    "question6": "You can describe a scenario like searching through a phonebook of 1,000 names: binary search only needs ~10 steps (log₂(1000) ≈ 10), whereas simple search may take up to 1,000 steps."
+  },
+  {
     "id":"Quicksort Answer",
     "question1": "✅ C: Quicksort uses a pivot to partition the array into two subarrays: one with elements smaller than the pivot and one with larger elements. It then recursively sorts these partitions.",
     "question2": "✅ B: Quicksort has an average time complexity of O(n log n) due to its divide-and-conquer approach. However, in the worst case, it can degrade to O(n²) if the pivot selection is poor.",
