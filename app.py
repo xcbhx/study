@@ -27,9 +27,19 @@ def category():
 def intro_algorithms_quiz():
   return render_template('intro_to_algo_quiz.html')
 
-@app.route('/submit_intro_algo_quiz', methods=['GET', 'POST'])
+@app.route('/submit_intro_algo_quiz', methods=['POST'])
 def intro_algorithms_answers():
-  return render_template('intro_to_algo_answer.html')
+  user_answers = collect_answers([
+    "question1", "question2", "question3", "question4", "question5", "question6"
+  ])
+  intro_algorithms_correct_answers = next((item for item in quiz_data if item["id"] == "Intro Algorithms Answer"), None)
+  if intro_algorithms_correct_answers:
+    return render_template(
+      'intro_to_algo_answer.html',
+      questions=intro_algorithms_correct_answers["questions"],
+      user_answers=user_answers
+      )
+  return "Introduction to Algorithms answers not found.", 404
 
 @app.route('/selection_sort', methods=['GET', 'POST'])
 def selection_sort():

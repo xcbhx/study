@@ -3,7 +3,18 @@
 {% block title %}Introduction to Algorithms Results{% endblock %}
 
 {% block content %}
+  <h1>Introduction to Algorithms Quiz Results</h1>
+  <form action="/intro_to_algo_quiz.html" method="get">
+    <button type="submit">Retake Quiz</button>
+  </form>
 
-
+  {% for question in questions %}
+    <fieldset>
+      <legend>Question {{ loop.index }}</legend>
+      <p>{{ question.text }}</p>
+      <p>Your Answer: {{ user_answers[question.id] or "No answer provided" }}</p>
+      <p>Correct Answer: {{ question.answer }}</p>
+    </fieldset>
+  {% endfor %}
 {% endblock %}
 

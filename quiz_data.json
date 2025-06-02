@@ -1,12 +1,38 @@
 [
   {
     "id":"Intro Algorithms Answer",
-    "question1": "✅ 7",
-    "question2": "✅ O(n)",
-    "question3": "✅ Sorted lists",
-    "question4": "✅ One. (Because each new power of 2 adds one step to log₂(n))",
-    "question5": "✅ It always checks every item",
-    "question6": "You can describe a scenario like searching through a phonebook of 1,000 names: binary search only needs ~10 steps (log₂(1000) ≈ 10), whereas simple search may take up to 1,000 steps."
+    "questions": [
+      {
+        "id": "question1",
+        "text": "How many steps (at most) does binary search need to find an item in a list of 128 elements?",
+        "answer": "✅ 7"
+      },
+      {
+        "id": "question2",
+        "text": "What is the time complexity of simple (linear) search?",
+        "answer": "✅ O(n)"
+      },
+      {
+        "id": "question3",
+        "text": "Binary search only works on:",
+        "answer": "✅ Sorted lists"
+      },
+      {
+        "id": "question4",
+        "text": "If you double the size of the list, how many more steps does binary search add?",
+        "answer": "✅ One. (Because each new power of 2 adds one step to log₂(n))"
+      },
+      {
+        "id": "question5",
+        "text": "Which of the following is NOT true about binary search?",
+        "answer": "✅ It always checks every item"
+      },
+      {
+        "id": "question6",
+        "text": "Why is binary search considered more efficient than simple search for large datasets? Use an example comparing both.",
+        "answer": "✅ You can describe a scenario like searching through a phonebook of 1,000 names: binary search only needs ~10 steps (log₂(1000) ≈ 10), whereas simple search may take up to 1,000 steps."
+      }
+    ]
   },
   {
     "id":"Quicksort Answer",
