@@ -41,11 +41,23 @@ def intro_algorithms_answers():
       )
   return "Introduction to Algorithms answers not found.", 404
 
-@app.route('/selection_sort', methods=['GET', 'POST'])
-def selection_sort():
-  if request.method == 'POST':
-    return 'Form submitted successfully!'
-  return render_template('selection_sort.html')
+@app.route('/selection_sort_quiz', methods=['GET'])
+def selection_sort_quiz():
+  return render_template('selection_sort_quiz.html')
+
+@app.route('/selection_sort_results', methods=['POST'])
+def selection_results():
+  user_answers = collect_answers([
+    "question1", "question2", "question3", "question4", "question5", "question6"
+  ])
+  selection_sort_answers = next((item for item in quiz_data if item["id"] == "Selection Sort Answers"), None)
+  if selection_sort_answers:
+    return render_template(
+      'selection_sort_results.html',
+      questions=selection_sort_answers["questions"],
+      user_answers=user_answers
+      )
+  return "Selection Sort answers not found.", 404
 
 @app.route('/quicksort_quiz', methods=['GET'])
 def quicksort_quiz():

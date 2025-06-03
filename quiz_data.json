@@ -35,6 +35,41 @@
     ]
   },
   {
+    "id":"Selection Sort Answers",
+    "questions": [
+      {
+        "id": "question1",
+        "text": "What is the main idea behind selection sort?",
+        "answer": "✅ Find the smallest item and place it at the beginning"
+      },
+      {
+        "id": "question2",
+        "text": "What is the time complexity of selection sort?",
+        "answer": "✅ O(n²)"
+      },
+      {
+        "id": "question3",
+        "text": "How many comparisons are made in selection sort for a list of n elements (in the worst case)?",
+        "answer": "✅ n(n - 1)/2"
+      },
+      {
+        "id": "question4",
+        "text": "Which of the following best describes the process of selection sort?",
+        "answer": "✅ An in-place algorithm that selects the minimum and swaps it"
+      },
+      {
+        "id": "question5",
+        "text": "Why is selection sort generally slower than more advanced sorting algorithms?",
+        "answer": "✅ It performs the same number of comparisons regardless of list order"
+      },
+      {
+        "id": "question6",
+        "text": "Selection sort always performs the same number of comparisons, even if the list is already sorted. Why is this a disadvantage compared to other sorting algorithms? Provide an example to support your answer.",
+        "answer": "✅ This is a disadvantage because it wastes time comparing elements unnecessarily. For example, in the already sorted list [1, 2, 3, 4, 5], selection sort still compares every pair, resulting in O(n²) time. Other algorithms like bubble sort or insertion sort can stop early or skip unnecessary work, making them faster on nearly-sorted data."
+      }
+    ]
+  },
+  {
     "id":"Quicksort Answer",
     "question1": "✅ C: Quicksort uses a pivot to partition the array into two subarrays: one with elements smaller than the pivot and one with larger elements. It then recursively sorts these partitions.",
     "question2": "✅ B: Quicksort has an average time complexity of O(n log n) due to its divide-and-conquer approach. However, in the worst case, it can degrade to O(n²) if the pivot selection is poor.",
