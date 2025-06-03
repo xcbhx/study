@@ -41,11 +41,13 @@ def intro_algorithms_answers():
       )
   return "Introduction to Algorithms answers not found.", 404
 
-@app.route('/selection_sort', methods=['GET', 'POST'])
-def selection_sort():
-  if request.method == 'POST':
-    return 'Form submitted successfully!'
-  return render_template('selection_sort.html')
+@app.route('/selection_sort_quiz', methods=['GET'])
+def selection_sort_quiz():
+  return render_template('selection_sort_quiz.html')
+
+@app.route('/selection_sort_results', methods=['POST'])
+def selection_results():
+  return render_template('selection_sort_quiz.html')
 
 @app.route('/quicksort_quiz', methods=['GET'])
 def quicksort_quiz():
