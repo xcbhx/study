@@ -8,6 +8,48 @@
     Selection Sort Quiz Results
   </h1>
 
+   {% for question in questions %}
+    <fieldset class="mb-8 ">
+      <legend class="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+        Question {{ loop.index }}
+      </legend>
 
+      <ul class="w-full mx-auto text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <!-- Question text -->
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="ps-3">
+            <p class="font-semibold text-lg text-gray-900 dark:text-white">
+              {{ question.text }}
+            </p>
+          </div>
+        </li>
+
+        <!-- User's answer -->
+        <li class="w-full border-b border-gray-200 dark:border-gray-600">
+          <div class="p-3">
+            <p class="text-center text-base text-gray-900 dark:text-gray-300">
+              <strong>Your Answer:</strong> {{ user_answers[question.id] or "No answer provided" }}
+            </p>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Correct answer -->
+      <div class="p-3 border border-t-0 border-gray-200 rounded-b-lg bg-white dark:bg-gray-700 dark:border-gray-600">
+        <p class="text-center text-base text-gray-900 dark:text-gray-300">
+          <strong>Correct Answer:</strong> {{ question.answer }}
+        </p>
+      </div>
+
+    </fieldset>
+  {% endfor %}
+
+  <form action="/selection_sort_quiz" method="get" class="text-center mb-8">
+    <button type="submit" class="mt-2 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+      Retake Quiz
+    </button>
+  </form>
+
+</div>
 {% endblock %}
 

@@ -53,7 +53,7 @@ def selection_results():
   selection_sort_answers = next((item for item in quiz_data if item["id"] == "Selection Sort Answers"), None)
   if selection_sort_answers:
     return render_template(
-      'selection_sort_quiz.html',
+      'selection_sort_results.html',
       questions=selection_sort_answers["questions"],
       user_answers=user_answers
       )
