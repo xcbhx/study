@@ -148,22 +148,84 @@
     "question5": "Answer: Two common collision-handling strategies are: Separate Chaining – Store multiple key-value pairs at the same index using a linked list. Open Addressing – Find an empty slot using techniques like linear probing (checking the next available index) or quadratic probing (checking indices based on a formula). Using a better hash function and maintaining a low load factor (entries/table size) also helps reduce collisions."
   },
   {
-    "id":"ch1_ch5 Answer",
-    "question1": "✅ It repeatedly divides a sorted list in half to find an element.",
-    "question2": "✅ It has an average time complexity of O(n log n), while Selection Sort is O(n²).",
-    "question3": "✅ A data structure that stores key-value pairs and provides fast lookups using a hash function.",
-    "question4": "✅ O(1)",
-    "question5": "✅ Separate chaining or open addressing",
-    "question6": "✅ To efficiently map keys to a specific index",
-    "question7": "✅ O(n log n)",
-    "question8": "✅ The list must be sorted.",
-    "question9": "✅ O(log n)",
-    "question10": "✅ O(n²)",
-    "question11": "✅ 1. Middle element: 10 (too small, so search right half) 2. New search space: [15, 20, 25] → Middle = 20 (too big, search left half) 3. New search space: [15] → Middle = 15 (found!) Binary search eliminates half the list at each step, making it O(log n) efficient.",
-    "question12": "✅ 1. Find 10, swap with 29 → [10, 29, 14, 37, 13]   2. Find 13, swap with 29 → [10, 13, 14, 37, 29]    3. Find 14, swap (already in place) → [10, 13, 14, 37, 29]   4. Find 29, swap with 37 → [10, 13, 14, 29, 37]    5. Sorted array: [10, 13, 14, 29, 37]",
-    "question13": "✅ Quicksort sorts in place, requiring only O(log n) space, while Merge Sort needs O(n) extra space. Quicksort also performs better on average due to fewer operations, making it faster in practice.",
-    "question14": "✅ Each student ID is used as a key, and their grade is stored as the value. Using a hash function, the key is mapped to an index in the table, allowing O(1) time complexity for lookups and updates.",
-    "question15": "✅ A poor hash function causes collisions, leading to longer lookup times (O(n) worst-case). It can also result in clustering, where many keys are assigned to the same index, reducing efficiency."
+    "id": "ch1_ch5 Answer",
+    "questions": [
+      {
+        "id": "question1",
+        "text": "How does binary search work?",
+        "answer": "✅ It repeatedly divides a sorted list in half to find an element."
+      },
+      {
+        "id": "question2",
+        "text": "Why is Quicksort generally faster than Selection Sort?",
+        "answer": "✅ It has an average time complexity of O(n log n), while Selection Sort is O(n²)."
+      },
+      {
+        "id": "question3",
+        "text": "What is a hash table?",
+        "answer": "✅ A data structure that stores key-value pairs and provides fast lookups using a hash function."
+      },
+      {
+        "id": "question4",
+        "text": "What is the time complexity of looking up a key in a hash table (on average)?",
+        "answer": "✅ O(1)"
+      },
+      {
+        "id": "question5",
+        "text": "What are two common techniques to handle collisions in a hash table?",
+        "answer": "✅ Separate chaining or open addressing"
+      },
+      {
+        "id": "question6",
+        "text": "Why do hash tables use hash functions?",
+        "answer": "✅ To efficiently map keys to a specific index"
+      },
+      {
+        "id": "question7",
+        "text": "What is the average time complexity of Quicksort?",
+        "answer": "✅ O(n log n)"
+      },
+      {
+        "id": "question8",
+        "text": "What is a prerequisite for binary search to work correctly?",
+        "answer": "✅ The list must be sorted."
+      },
+      {
+        "id": "question9",
+        "text": "What is the time complexity of binary search?",
+        "answer": "✅ O(log n)"
+      },
+      {
+        "id": "question10",
+        "text": "What is the worst-case time complexity of Selection Sort?",
+        "answer": "✅ O(n²)"
+      },
+      {
+        "id": "question11",
+        "text": "Describe how binary search works using the array [2, 4, 7, 10, 15, 20, 25]. Search for the number 15 and explain each step.",
+        "answer": "✅ 1. Check middle (10) → too small. 2. Check right half [15, 20, 25]. Middle is 20 → too big. 3. Left of 20 is 15 → found. Binary search cuts the list in half each time."
+      },
+      {
+        "id": "question12",
+        "text": "Walk through the steps of Selection Sort for the array [29, 10, 14, 37, 13].",
+        "answer": "✅ Swap 10 with 29 → [10, 29, 14, 37, 13]. Swap 13 with 29 → [10, 13, 14, 37, 29]. Continue until sorted → [10, 13, 14, 29, 37]."
+      },
+      {
+        "id": "question13",
+        "text": "Explain why Quicksort is often preferred over Merge Sort despite both having O(n log n) average time complexity.",
+        "answer": "✅ Quicksort sorts in-place and typically requires less memory and fewer operations in practice, making it faster."
+      },
+      {
+        "id": "question14",
+        "text": "Explain how a hash table can be used to efficiently store and retrieve student grades.",
+        "answer": "✅ Use student IDs as keys and grades as values. Hashing provides O(1) access for insertions and lookups."
+      },
+      {
+        "id": "question15",
+        "text": "Why is a poor hash function problematic for a hash table? What issues can it cause?",
+        "answer": "✅ Poor hash functions lead to many collisions, slowing down access time and reducing efficiency."
+      }
+    ]
   },
   {
     "id":"Breadth-First Search Answer",

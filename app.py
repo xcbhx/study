@@ -124,9 +124,13 @@ def ch1_ch5():
   ])
   ch1_ch5_correct_answer = next((item for item in quiz_data if item["id"] == "ch1_ch5 Answer"), None)
   if ch1_ch5_correct_answer:
-    return render_template('ch1_ch5_answer.html', user_answers=user_answers, ch1_ch5_answer=ch1_ch5_correct_answer)
-  else:
-    return "Ch.1 - Ch.5 answers not found.", 404
+    return render_template(
+      'ch1_ch5_answer.html',
+      questions=ch1_ch5_correct_answer["questions"],
+      user_answers=user_answers
+      )
+  return "Ch.1 - Ch.5 answers not found.", 404
+
   
 @app.route('/breadth_first_search_quiz', methods=['GET'])
 def breadth_first_search_quiz():
