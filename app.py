@@ -63,14 +63,18 @@ def selection_results():
 def quicksort_quiz():
   return render_template('quicksort_quiz.html')
 
-@app.route('/submit_quicksort_quiz', methods=['POST'])
+@app.route('/quicksort_quiz_results', methods=['POST'])
 def quicksort_answers():
   user_answers = collect_answers([
-    "question1", "question2", "question3", "question4", "question5"
+    "question1", "question2", "question3", "question4", "question5", "question6"
   ])
-  quicksort_correct_answers = next((item for item in quiz_data if item["id"] == "Quicksort Answer"), None)
+  quicksort_correct_answers = next((item for item in quiz_data if item["id"] == "Quicksort Answers"), None)
   if quicksort_correct_answers:
-    return render_template('quicksort_answer.html', user_answers=user_answers, quicksort_answers=quicksort_correct_answers)
+    return render_template(
+      'quicksort_answer.html', 
+      user_answers=user_answers,
+      questions=quicksort_correct_answers["questions"]
+      )
   else:
     return "Quicksort answers not found.", 404
 
