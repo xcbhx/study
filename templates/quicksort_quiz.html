@@ -1,85 +1,244 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block title %}Quicksort{% endblock %}
 
 {% block content %}
-  <form action="/submit_quicksort_quiz" method="post">
-    <fieldset>
-      <legend>1. What is the primary concept behind the Quicksort algorithm?</legend>
-      <label for="question1_a">
-        <input type="radio" name="question1" value="A" id="question1_a">A. Repeatedly merging sorted subarrays
-      </label>
-      <br />
-      <label for="question1_b">
-        <input type="radio" name="question1" value="B" id="question1_b">B. Swapping adjacent elements to sort the array
-      </label>
-      <br />
-      <label for="question1_c">
-        <input type="radio" name="question1" value="C" id="question1_c">C. Dividing the array using a pivot and sorting the partitions recursively
-      </label>
-      <br />
-      <label for="question1_d">
-        <input type="radio" name="question1" value="D" id="question1_d">D. Finding the smallest element and placing it in its correct position
-      </label>
-    </fieldset>
+<div class="max-w-3xl mx-auto px-2">
+  <h1 class="text-4xl text-center font-bold dark:text-white mb-8">
+    Quicksort Quiz
+  </h1>
 
-    <fieldset>
-      <legend>2. What is the average time complexity of Quicksort?</legend>
-      <label for="question2_a">
-        <input type="radio" name="question2" value="A" id="question2_a">A. O(n)
-      </label>
-      <br />
-      <label for="question2_b">
-        <input type="radio" name="question2" value="B" id="question2_b">B. O(n log n)
-      </label>
-      <br />
-      <label for="question2_c">
-        <input type="radio" name="question2" value="C" id="question2_c">C. O(n²)
-      </label>
-      <br />
-      <label for="question2_d">
-        <input type="radio" name="question2" value="D" id="question2_d">D. O(log n)
-      </label>
-    </fieldset>
-
-    <fieldset>
-      <legend>3. Which scenario could lead to the worst-case time complexity in Quicksort?</legend>
-      <label for="question3_a">
-        <input type="radio" name="question3" value="A" id="question3_a">A. The pivot is always chosen as the middle element
-      </label>
-      <br />
-      <label for="question3_b">
-        <input type="radio" name="question3" value="B" id="question3_b">B. The pivot divides the array into nearly equal parts
-      </label>
-      <br />
-      <label for="question3_c">
-        <input type="radio" name="question3" value="C" id="question3_c">C. The pivot is always the smallest or largest element
-      </label>
-      <br />
-      <label for="question3_d">
-        <input type="radio" name="question3" value="D" id="question3_d">D. The array contains all unique elements
-      </label>
-    </fieldset>
-  
-    <fieldset>
-      <legend>4. Explain how Quicksort works using the array [8, 3, 1, 7, 0, 10, 2]. Show the partitions 
-        and the pivot selections for one complete iteration.
+  <form action="/quicksort_quiz_results" method="post">
+    <!-- Question # 1 -->
+    <fieldset class="mt-8">
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        1. What is the primary concept behind the Quicksort algorithm?
       </legend>
-      <label for="question4">
-        <input type="text" name="question4" value="Explain Answer" id="question4" onfocus="this.value = ''">
-      </label>
+
+      <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question1_a" class="flex items-center space-x-2">
+              <input type="radio" name="question1" value="Repeatedly merging sorted subarrays" id="question1_a">
+              <span>Repeatedly merging sorted subarrays</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question1_b" class="flex items-center space-x-2">
+              <input type="radio" name="question1" value="Swapping adjacent elements to sort the array" id="question1_b">
+              <span>Swapping adjacent elements to sort the array</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question1_c" class="flex items-center space-x-2">
+              <input type="radio" name="question1" value="Dividing the array using a pivot and sorting the partitions recursively" id="question1_c">
+              <span>Dividing the array using a pivot and sorting the partitions recursively</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question1_d" class="flex items-center space-x-2">
+              <input type="radio" name="question1" value="Finding the smallest element and placing it in its correct position" id="question1_d">
+              <span>Finding the smallest element and placing it in its correct position</span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+    <!-- Question # 2 -->
+    <fieldset class="mt-8">
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        2. What is the average time complexity of Quicksort?
+      </legend>
+
+      <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question2_a" class="flex items-center space-x-2">
+              <input type="radio" name="question2" value="O(n)" id="question2_a">
+              <span>O(n)</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question2_b" class="flex items-center space-x-2">
+              <input type="radio" name="question2" value="O(n log n)" id="question2_b">
+              <span>O(n log n)</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question2_c" class="flex items-center space-x-2">
+              <input type="radio" name="question2" value="O(n²)" id="question2_c">
+              <span>O(n²)</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question2_d" class="flex items-center space-x-2">
+              <input type="radio" name="question2" value="O(log n)" id="question2_d">
+              <span>O(log n)</span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+    <!-- Question # 3 -->
+    <fieldset class="mt-8">
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        3. Which scenario could lead to the worst-case time complexity in Quicksort?
+      </legend>
+
+      <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question3_a" class="flex items-center space-x-2">
+              <input type="radio" name="question3" value="The pivot is always chosen as the middle element" id="question3_a">
+              <span>The pivot is always chosen as the middle element</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question3_b" class="flex items-center space-x-2">
+              <input type="radio" name="question3" value="Swapping adjacent elements to sort the array" id="question3_b">
+              <span>Swapping adjacent elements to sort the array</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question3_c" class="flex items-center space-x-2">
+              <input type="radio" name="question3" value="The pivot is always the smallest or largest element" id="question3_c">
+              <span>The pivot is always the smallest or largest element</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question3_d" class="flex items-center space-x-2">
+              <input type="radio" name="question3" value="The array contains all unique elements" id="question3_d">
+              <span>The array contains all unique elements</span>
+            </label>
+          </div>
+        </li>
+      </ul>
     </fieldset>
   
-    <fieldset>
-      <legend>5. How does the choice of pivot affect Quicksort's performance, and what strategies can be 
+    <!-- Question # 4 -->
+    <fieldset class="mt-8">
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        4. Why is choosing a good pivot important in Quicksort?
+      </legend>
+
+      <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question4_a" class="flex items-center space-x-2">
+              <input type="radio" name="question4" value="It increases the number of recursive calls" id="question4_a">
+              <span>It increases the number of recursive calls</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question4_b" class="flex items-center space-x-2">
+              <input type="radio" name="question4" value="It ensures the sorted elements are placed at the start" id="question4_b">
+              <span>It ensures the sorted elements are placed at the start</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question4_c" class="flex items-center space-x-2">
+              <input type="radio" name="question4" value="It helps divide the array into balanced partitions, improving efficiency" id="question4_c">
+              <span>It helps divide the array into balanced partitions, improving efficiency</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question4_d" class="flex items-center space-x-2">
+              <input type="radio" name="question4" value="It reduces the space used in memory" id="question4_d">
+              <span>It reduces the space used in memory</span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+  
+    <!-- Question # 5 -->
+    <fieldset class="mt-8">
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        5. What strategy can improve Quicksort's performance on nearly sorted or bad pivot inputs?
+      </legend>
+
+      <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question5_a" class="flex items-center space-x-2">
+              <input type="radio" name="question5" value="Always pick the last element as the pivot" id="question5_a">
+              <span>Always pick the last element as the pivot</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question5_b" class="flex items-center space-x-2">
+              <input type="radio" name="question5" value="Use insertion sort instead" id="question5_b">
+              <span>Use insertion sort instead</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question5_c" class="flex items-center space-x-2">
+              <input type="radio" name="question5" value="Choose a random pivot" id="question5_c">
+              <span>Choose a random pivot</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question5_d" class="flex items-center space-x-2">
+              <input type="radio" name="question5" value="Avoid recursion" id="question5_d">
+              <span>Avoid recursion</span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+    
+    <!-- Question # 6 -->
+     <fieldset class="mt-8">
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        6. How does the choice of pivot affect Quicksort's performance, and what strategies can be 
         used to improve pivot selection?
       </legend>
-      <label for="question5">
-        <input type="text" name="question5" value="Enter Answer" id="question5" onfocus="this.value = ''"> 
+
+      <label for="question6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        <textarea name="question6" id="question6" rows="4" cols="50" class="block p-2.5 text-sm text-gray-900 bg-gray-50 resize-x rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Explain Your Answer">
+        </textarea>
       </label>
     </fieldset>
     
-    <button type="submit">Submit</button>
+    <!-- Submit Button -->
+    <div class="text-center m-4">
+      <button type="submit" class="mt-2 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+        Submit
+      </button>
+    </div>
   </form>
+</div>
 
 {% endblock %}
