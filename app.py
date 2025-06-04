@@ -124,9 +124,13 @@ def ch1_ch5():
   ])
   ch1_ch5_correct_answer = next((item for item in quiz_data if item["id"] == "ch1_ch5 Answer"), None)
   if ch1_ch5_correct_answer:
-    return render_template('ch1_ch5_answer.html', user_answers=user_answers, ch1_ch5_answer=ch1_ch5_correct_answer)
-  else:
-    return "Ch.1 - Ch.5 answers not found.", 404
+    return render_template(
+      'ch1_ch5_answer.html',
+      questions=ch1_ch5_correct_answer["questions"],
+      user_answers=user_answers
+      )
+  return "Ch.1 - Ch.5 answers not found.", 404
+
   
 @app.route('/breadth_first_search_quiz', methods=['GET'])
 def breadth_first_search_quiz():
@@ -159,15 +163,18 @@ def dijkstra_quiz_answer():
   ])
   dijkstra_answers = next((item for item in quiz_data if item["id"] == "Dijkstras Algorithm Answer"), None)
   if dijkstra_answers:
-    return render_template('dijkstra_algo_answers.html', user_answers=user_answers, dijkstra_algo_answers=dijkstra_answers)
+    return render_template(
+      'dijkstra_algo_answers.html',
+      user_answers=user_answers,
+      questions=dijkstra_answers["questions"],
+      dijkstra_algo=dijkstra_answers
+    )
   else:
     return "Dijkstra's Algorithm answers not found.", 404
-  
 
 @app.route('/greedy_algo_quiz', methods=['GET'])
 def greedy_quiz():
   return render_template('greedy_algo_quiz.html')
-
 
 @app.route('/submit_greedy_quiz', methods=['POST'])
 def greedy_quiz_answer():
