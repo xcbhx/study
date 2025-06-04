@@ -75,7 +75,7 @@
       {
         "id": "question1",
         "text": "What is the primary concept behind the Quicksort algorithm?",
-        "answer": "✅ FQuicksort uses a pivot to partition the array into two subarrays: one with elements smaller than the pivot and one with larger elements. It then recursively sorts these partitions."
+        "answer": "✅ Quicksort uses a pivot to partition the array into two subarrays: one with elements smaller than the pivot and one with larger elements. It then recursively sorts these partitions."
       },
       {
         "id": "question2",
