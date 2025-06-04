@@ -167,12 +167,38 @@
   },
   {
     "id":"Breadth-First Search Answer",
-    "question1": "✅ C: A traversal algorithm that explores all neighbors of a node before moving to the next level using a queue",
-    "question2": "✅ C: When you need to find the shortest path in an unweighted graph.",
-    "question3": "✅ D: It explores nodes level by level, guaranteeing the first time it finds a node is via the shortest path",
-    "question4": "✅ B: Queue and Set, because they ensure nodes are processed in order and avoid revisiting",
-    "question5": "✅ C: Use a queue to explore each level of neighbors from A and stop when G is found",
-    "question6": "Its important to track people you've already searched to prevent infinite loops, especially in graphs with cycles. Without this, you could end up rechecking the same nodes multiple times, wasting time or even causing the algorithm to never finish."
+    "questions": [
+      {
+        "id": "question1",
+        "text": "What is Breadth-First Search (BFS), and how does it work?",
+        "answer": "✅ A traversal algorithm that explores all neighbors of a node before moving to the next level using a queue"
+      },
+      {
+        "id": "question2",
+        "text": "In what scenarios would you use BFS instead of Depth-First Search (DFS)?",
+        "answer": "✅ When you need to find the shortest path in an unweighted graph."
+      },
+      {
+        "id": "question3",
+        "text": "How does BFS ensure the shortest path is found in an unweighted graph?",
+        "answer": "✅ It explores nodes level by level, guaranteeing the first time it finds a node is via the shortest path"
+      },
+      {
+        "id": "question4",
+        "text": "What data structures are commonly used to implement BFS, and why?",
+        "answer": "✅ Queue and Set, because they ensure nodes are processed in order and avoid revisiting"
+      },
+      {
+        "id": "question5",
+        "text": "Describe how you would apply BFS to find the shortest path from node A to node G in a simple graph.",
+        "answer": "✅ Use a queue to explore each level of neighbors from A and stop when G is found"
+      },
+      {
+        "id": "question6",
+        "text": "Why is it important to keep track of the people you've already searched in a BFS algorithm? What problem does this prevent?",
+        "answer": "✅ Its important to track people you've already searched to prevent infinite loops, especially in graphs with cycles. Without this, you could end up rechecking the same nodes multiple times, wasting time or even causing the algorithm to never finish."
+      }
+    ]
   },
   {
     "id":"Dijkstras Algorithm Answer",
