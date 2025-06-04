@@ -59,6 +59,24 @@ def selection_results():
       )
   return "Selection Sort answers not found.", 404
 
+@app.route('/recursion_quiz', methods=['GET'])
+def recursion_quiz():
+  return render_template('recursion_quiz.html')
+
+@app.route('/submit_recursion_quiz', methods=['POST'])
+def recursion_results():
+  user_answers = collect_answers([
+    "question1", "question2", "question3", "question4", "question5", "question6"
+  ])
+  recursion_answers = next((item for item in quiz_data if item["id"] == "Recursion Answers"), None)
+  if recursion_answers:
+    return render_template(
+      'recursion_answers.html',
+      questions=recursion_answers["questions"],
+      user_answers=user_answers
+      )
+  return "Recursion answers not found.", 404
+
 @app.route('/quicksort_quiz', methods=['GET'])
 def quicksort_quiz():
   return render_template('quicksort_quiz.html')
@@ -115,15 +133,20 @@ def breadth_first_search_quiz():
   return render_template('breadth_first_search_quiz.html')
 
 @app.route('/submit_breadth_first_search_quiz', methods=['POST'])
-def breath_first_search():
+def breath_first_search_quiz_answers():
   user_answers = collect_answers([
     "question1", "question2", "question3", "question4", "question5", "question6"
   ])
   breadth_first_search_answer = next((item for item in quiz_data if item["id"] == "Breadth-First Search Answer"), None)
   if breadth_first_search_answer:
-    return render_template('breadth_first_search_answer.html', user_answers=user_answers, breadth_first_search=breadth_first_search_answer)
+    return render_template(
+      'breadth_first_search_answers.html',
+      user_answers=user_answers,
+      questions=breadth_first_search_answer["questions"],
+      breadth_first_search=breadth_first_search_answer
+    )
   else:
-    return "Breath First Search answers not found.", 404
+    return "Breadth-First Search answers not found.", 404
   
 @app.route('/dijkstra_algo_quiz', methods=['GET'])
 def dijkstra_quiz():

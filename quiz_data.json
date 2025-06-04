@@ -70,6 +70,41 @@
     ]
   },
   {
+    "id":"Recursion Answers",
+    "questions": [
+      {
+        "id": "question1",
+        "text": "What is the base case in a recursive function?",
+        "answer": "✅ The case where the function stops calling itself"
+      },
+      {
+        "id": "question2",
+        "text": "What happens if a recursive function doesn't reach its base case?",
+        "answer": "✅ It enters infinite recursion and crashes with a stack overflow"
+      },
+      {
+        "id": "question3",
+        "text": "What is the main role of the call stack in recursion?",
+        "answer": "✅ It records each function call and where to return afterward"
+      },
+      {
+        "id": "question4",
+        "text": "What does the call stack do during a recursive function call?",
+        "answer": "✅ It tracks each function call and waits to return until the previous one finishes"
+      },
+      {
+        "id": "question5",
+        "text": "Which problem is often solved naturally using recursion?",
+        "answer": "✅ Finding factorial of a number"
+      },
+      {
+        "id": "question6",
+        "text": "In your own words, explain how recursion works. Why does a recursive function need both a base case and a recursive case?",
+        "answer": "✅ Recursion is when a function calls itself to solve smaller parts of a problem. It needs a base case to stop the recursion and return a value, and a recursive case to keep breaking the problem down. Without the base case, the function would call itself forever and crash."
+      }
+    ]
+  },
+  {
     "id":"Quicksort Answers",
     "questions": [
       {
@@ -132,12 +167,38 @@
   },
   {
     "id":"Breadth-First Search Answer",
-    "question1": "✅ C: A traversal algorithm that explores all neighbors of a node before moving to the next level using a queue",
-    "question2": "✅ C: When you need to find the shortest path in an unweighted graph.",
-    "question3": "✅ D: It explores nodes level by level, guaranteeing the first time it finds a node is via the shortest path",
-    "question4": "✅ B: Queue and Set, because they ensure nodes are processed in order and avoid revisiting",
-    "question5": "✅ C: Use a queue to explore each level of neighbors from A and stop when G is found",
-    "question6": "Its important to track people you've already searched to prevent infinite loops, especially in graphs with cycles. Without this, you could end up rechecking the same nodes multiple times, wasting time or even causing the algorithm to never finish."
+    "questions": [
+      {
+        "id": "question1",
+        "text": "What is Breadth-First Search (BFS), and how does it work?",
+        "answer": "✅ A traversal algorithm that explores all neighbors of a node before moving to the next level using a queue"
+      },
+      {
+        "id": "question2",
+        "text": "In what scenarios would you use BFS instead of Depth-First Search (DFS)?",
+        "answer": "✅ When you need to find the shortest path in an unweighted graph."
+      },
+      {
+        "id": "question3",
+        "text": "How does BFS ensure the shortest path is found in an unweighted graph?",
+        "answer": "✅ It explores nodes level by level, guaranteeing the first time it finds a node is via the shortest path"
+      },
+      {
+        "id": "question4",
+        "text": "What data structures are commonly used to implement BFS, and why?",
+        "answer": "✅ Queue and Set, because they ensure nodes are processed in order and avoid revisiting"
+      },
+      {
+        "id": "question5",
+        "text": "Describe how you would apply BFS to find the shortest path from node A to node G in a simple graph.",
+        "answer": "✅ Use a queue to explore each level of neighbors from A and stop when G is found"
+      },
+      {
+        "id": "question6",
+        "text": "Why is it important to keep track of the people you've already searched in a BFS algorithm? What problem does this prevent?",
+        "answer": "✅ Its important to track people you've already searched to prevent infinite loops, especially in graphs with cycles. Without this, you could end up rechecking the same nodes multiple times, wasting time or even causing the algorithm to never finish."
+      }
+    ]
   },
   {
     "id":"Dijkstras Algorithm Answer",
