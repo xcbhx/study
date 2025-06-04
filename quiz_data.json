@@ -200,14 +200,40 @@
       }
     ]
   },
-  {
+    {
     "id":"Dijkstras Algorithm Answer",
-    "question1": "✅ C: Dijkstra’s algorithm finds the shortest path from a starting node to all other nodes in a weighted graph with non-negative edge weights.",
-    "question2": "✅ C: A hash table (or dictionary) is used to keep track of the current shortest known distance to each node.",
-    "question3": "✅ C: Dijkstra’s algorithm starts by initializing the costs table (shortest distances from the start) and parents table (to keep track of the path).",
-    "question4": "✅ C: The algorithm continues until it has found the shortest path to all nodes in the graph.",
-    "question5": "✅ C:  Dijkstra’s algorithm does not work with negative-weight edges because it assumes once a node's shortest path is found, it won't change—which isn't true if negative weights exist.",
-    "question6": "Dijkstra’s algorithm starts by assigning a cost of 0 to the starting node and infinity to all others. It uses the costs table to track the shortest known distance to each node and the parents table to record the best parent to reach that node. It repeatedly visits the unvisited node with the lowest cost, updates the costs of its neighbors if a cheaper path is found, and marks it as visited. This continues until all nodes are visited or the destination node has the shortest path determined."
+    "questions": [
+      {
+        "id": "question1",
+        "text": "What is Dijkstra’s algorithm used for?",
+        "answer": "✅ Finding the shortest path in a graph with non-negative weights"
+      },
+      {
+        "id": "question2",
+        "text": "What data structure is typically used to track the current shortest distances to each node?<",
+        "answer": "✅ A hash table (dictionary)"
+      },
+      {
+        "id": "question3",
+        "text": "What is the first step of Dijkstra’s algorithm?",
+        "answer": "✅ Initialize costs and parents table"
+      },
+      {
+        "id": "question4",
+        "text": "When does Dijkstra’s algorithm stop?",
+        "answer": "✅ When the shortest path to all nodes has been determined"
+      },
+      {
+        "id": "question5",
+        "text": "Which of the following is a limitation of Dijkstra’s algorithm?",
+        "answer": "✅ It does not work with graphs that have negative weights"
+      },
+      {
+        "id": "question6",
+        "text": "Explain how Dijkstra’s algorithm determines the shortest path from a start node to a finish node. What is the role of the \"costs\" and \"parents\" tables?",
+        "answer": "✅ Dijkstra’s algorithm starts by assigning a cost of 0 to the starting node and infinity to all others. It uses the costs table to track the shortest known distance to each node and the parents table to record the best parent to reach that node. It repeatedly visits the unvisited node with the lowest cost, updates the costs of its neighbors if a cheaper path is found, and marks it as visited. This continues until all nodes are visited or the destination node has the shortest path determined."
+      }
+    ]
   },
   {
     "id":"Greedy Algorithm Answer",

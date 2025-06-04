@@ -1,131 +1,236 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block title %}Dijkstra's Algorithm{% endblock %}
 
 {% block content %}
+<div class="max-w-3xl mx-auto px-2">
+  <h1 class="text-4xl text-center font-bold dark:text-white mb-8">
+    Dijkstra's Algorithm
+  </h1>
+
   <form action="/submit_dijkstras_quiz" method="post">
-    <fieldset>
-      <legend>1. What is Dijkstra’s algorithm used for?</legend>
-      <label for="question1_a">
-        <input type="radio" name="question1" value="A. Finding the shortest path in a graph with negative weights" id="question1_a">
-          A. Finding the shortest path in a graph with negative weights
-      </label>
-      <br />
-      <label for="question1_b">
-        <input type="radio" name="question1" value="B. Finding the longest path in a weighted graph" id="question1_b">
-          B. Finding the longest path in a weighted graph
-      <br />
-      <label for="question1_c">
-        <input type="radio" name="question1" value="C. Finding the shortest path in a graph with non-negative weights" id="question1_c">
-          C. Finding the shortest path in a graph with non-negative weights
-      </label>
-      <br />
-      <label for="question1_d">
-        <input type="radio" name="question1" value="D. Sorting nodes in a graph" id="question1_d">
-          D. Sorting nodes in a graph
+    <fieldset class="mt-8">
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        1.  What is Dijkstra’s algorithm used for?
+      </legend>
+
+      <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question1_a" class="flex items-center space-x-2">
+              <input type="radio" name="question1" value="Finding the shortest path in a graph with negative weights" id="question1_a">
+              <span>Finding the shortest path in a graph with negative weights</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question1_b" class="flex items-center space-x-2">
+              <input type="radio" name="question1" value="Finding the longest path in a weighted graph" id="question1_b">
+              <span>Finding the longest path in a weighted graph</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question1_c" class="flex items-center space-x-2">
+              <input type="radio" name="question1" value="Finding the shortest path in a graph with non-negative weights" id="question1_c">
+              <span>Finding the shortest path in a graph with non-negative weights</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question1_d" class="flex items-center space-x-2">
+              <input type="radio" name="question1" value="Sorting nodes in a graph" id="question1_d">
+              <span>Sorting nodes in a graph</span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+    <fieldset class="mt-8">
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        2. What data structure is typically used to track the current shortest distances to each node?
+      </legend>
+
+      <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question2_a" class="flex items-center space-x-2">
+              <input type="radio" name="question2" value="A stack" id="question2_a">
+              <span>A stack</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question2_b" class="flex items-center space-x-2">
+              <input type="radio" name="question2" value="A queue" id="question2_b">
+              <span>A queue</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question2_c" class="flex items-center space-x-2">
+              <input type="radio" name="question2" value="A hash table (dictionary)" id="question2_c">
+              <span>A hash table (dictionary)</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question2_d" class="flex items-center space-x-2">
+              <input type="radio" name="question2" value="A list" id="question2_d">
+              <span>A list</span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+    <fieldset class="mt-8">
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        3. What is the first step of Dijkstra’s algorithm?
+      </legend>
+
+      <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question3_a" class="flex items-center space-x-2">
+              <input type="radio" name="question3" value="Explore all neighboring nodes" id="question3_a">
+              <span>Explore all neighboring nodes</span> 
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question3_b" class="flex items-center space-x-2">
+              <input type="radio" name="question3" value="Add all nodes to the visited set" id="question3_b">
+              <span>Add all nodes to the visited set</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question3_c" class="flex items-center space-x-2">
+              <input type="radio" name="question3" value="Initialize costs and parents table" id="question3_c">
+              <span>Initialize costs and parents table</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question3_d" class="flex items-center space-x-2">
+              <input type="radio" name="question3" value="Sort all the edges in the graph" id="question3_d">
+              <span>Sort all the edges in the graph</span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+    <fieldset class="mt-8">
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        4. When does Dijkstra’s algorithm stop?
+      </legend>
+
+      <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question4_a" class="flex items-center space-x-2">
+              <input type="radio" name="question4" value="When all neighbors are visited" id="question4_a">
+              <span>When all neighbors are visited</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question4_b" class="flex items-center space-x-2">
+              <input type="radio" name="question4" value="When the end node is reached" id="question4_b">
+              <span>When the end node is reached</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question4_c" class="flex items-center space-x-2">
+              <input type="radio" name="question4" value="When the shortest path to all nodes has been determined" id="question4_c">
+              <span>When the shortest path to all nodes has been determined</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question4_d" class="flex items-center space-x-2">
+              <input type="radio" name="question4" value="When all edges are checked" id="question4_d">
+              <span>When all edges are checked</span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+    <fieldset class="mt-8">
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        5. Which of the following is a limitation of Dijkstra’s algorithm?<
+      </legend>
+
+      <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question5_a" class="flex items-center space-x-2">
+              <input type="radio" name="question5" value="It can’t handle large graphs" id="question5_a">
+              <span>It can’t handle large graphs</span> 
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question5_b" class="flex items-center space-x-2">
+              <input type="radio" name="question5" value="It only works with directed graphs" id="question5_b">
+              <span>It only works with directed graphs</span> 
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question5_c" class="flex items-center space-x-2">
+              <input type="radio" name="question5" value="It does not work with graphs that have negative weights" id="question5_c">
+              <span>It does not work with graphs that have negative weights</span>
+            </label>
+          </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+          <div class="flex items-center ps-3">
+            <label for="question5_d" class="flex items-center space-x-2">
+              <input type="radio" name="question5" value="It only finds approximate paths" id="question5_d">
+              <span>It only finds approximate paths</span>
+            </label>
+          </div>
+        </li>
+      </ul>
+    </fieldset>
+
+    <fieldset class="mt-8">
+      <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+        6. Explain how Dijkstra’s algorithm determines the shortest path from a start node to a finish node. What is the role of the "costs" and "parents" tables?
+      </legend>
+
+      <label for="question6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
+        <textarea name="question6" id="question6" rows="4" cols="50" class="block p-2.5 text-sm text-gray-900 bg-gray-50 resize-x rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Explain Your Answer">
+        </textarea>
       </label>
     </fieldset>
-    <br />
-    <fieldset>
-      <legend>2. What data structure is typically used to track the current shortest distances to each node?</legend>
-      <label for="question2_a">
-        <input type="radio" name="question2" value="A. A stack" id="question2_a">
-          A. A stack
-      </label>
-      <br />
-      <label for="question2_b">
-        <input type="radio" name="question2" value="B. A queue" id="question2_b">
-        B. A queue
-      </label>
-      <br />
-      <label for="question2_c">
-        <input type="radio" name="question2" value="C. A hash table (dictionary)" id="question2_c">
-          C. A hash table (dictionary)
-      </label>
-      <br />
-      <label for="question2_d">
-        <input type="radio" name="question2" value="D. A list" id="question2_d">
-          D. A list
-      </label>
-    </fieldset>
-    <br />
-    <fieldset>
-      <legend>3. What is the first step of Dijkstra’s algorithm?</legend>
-      <label for="question3_a">
-        <input type="radio" name="question3" value="A. Explore all neighboring nodes" id="question3_a">
-          A. Explore all neighboring nodes
-      </label>
-      <br />
-      <label for="question3_b">
-        <input type="radio" name="question3" value="B. Add all nodes to the visited set" id="question3_b">
-          B. Add all nodes to the visited set
-      </label>
-      <br />
-      <label for="question3_c">
-        <input type="radio" name="question3" value="C. nitialize costs and parents tables" id="question3_c">
-          C. Initialize costs and parents tables
-      </label>
-      <br />
-      <label for="question3_d">
-        <input type="radio" name="question3" value="D. Sort all the edges in the graph" id="question3_d">
-          D. Sort all the edges in the graph
-      </label>
-    </fieldset>
-    <br />
-    <fieldset>
-      <legend>4. When does Dijkstra’s algorithm stop?</legend>
-      <label for="question4_a">
-        <input type="radio" name="question4" value="A. When all neighbors are visited" id="question4_a">
-          A. When all neighbors are visited
-      </label>
-      <br />
-      <label for="question4_b">
-        <input type="radio" name="question4" value="B. When the end node is reached" id="question4_b">
-          B. When the end node is reached
-      </label>
-      <br />
-      <label for="question4_c">
-        <input type="radio" name="question4" value="C. When the shortest path to all nodes has been determined" id="question4_c">
-          C. When the shortest path to all nodes has been determined
-      </label>
-      <br />
-      <label for="question4_d">
-        <input type="radio" name="question4" value="D. When all edges are checked" id="question4_d">
-          D. When all edges are checked
-      </label>
-    </fieldset>
-    <br />
-    <fieldset>
-      <legend>5. Which of the following is a limitation of Dijkstra’s algorithm?</legend>
-      <label for="question5_a">
-        <input type="radio" name="question5" value="A. It can’t handle large graphs" id="question5_a">
-          A. It can’t handle large graphs
-      </label>
-      <br />
-      <label for="question5_b">
-        <input type="radio" name="question5" value="B. It only works with directed graphs" id="question5_b">
-          B. It only works with directed graphs
-      </label>
-      <br />
-      <label for="question5_c">
-        <input type="radio" name="question5" value="C. It does not work with graphs that have negative weights" id="question5_c">
-          C. It does not work with graphs that have negative weights
-      </label>
-      <br />
-      <label for="question5_d">
-        <input type="radio" name="question5" value="D. It only finds approximate paths" id="question5_d">
-          D. It only finds approximate paths
-      </label>
-    </fieldset>
-    <br />
-    <fieldset>
-      <legend>6. Explain how Dijkstra’s algorithm determines the shortest path from a start node to a finish node. What is the role of the "costs" and "parents" tables?</legend>
-      <label for="question6">
-        <input type="text" name="question6" value="Explain Answer" id="question6" onfocus="this.value = ''">
-      </label>
-    </fieldset>
-    <br />
-    <button type="submit">Submit</button>
+
+    <div class="text-center m-4">
+      <button type="submit" class="mt-2 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+        Submit
+      </button>
+    </div>
   </form>
+</div>
 
 {% endblock %}
