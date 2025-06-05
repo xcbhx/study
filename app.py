@@ -37,6 +37,24 @@ def show_quiz(quiz_id):
     quiz_id=quiz_id, 
     questions=quiz["questions"])
 
+# Dynamically display each quiz result
+@app.route('/quiz/<quiz_id>/submit', methods=['POST'])
+def submit_quiz(quiz_id):
+  quiz_display_name = quiz_id.replace('_', ' ').title() + " Answers"
+  quiz = next((q for q in quiz_data if q["id"] == quiz_display_name), None)
+
+  if not quiz:
+    return f"Answers for '{quiz_id}' not found.", 404
+  
+  num_questions = len(quiz["questions"])
+  user_answers = collect_answers([f"question{i}" for i in range(1, num_questions + 1)])
+  
+  return render_template(
+    'quiz_results_template.html', 
+    quiz_id=quiz_id, 
+    questions=quiz["questions"],
+    user_answers=user_answers
+    )
 
 # @app.route('/intro_algo_quiz', methods=['GET'])
 # def intro_algorithms_quiz():
