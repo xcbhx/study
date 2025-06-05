@@ -24,9 +24,9 @@ def category():
   return render_template('category.html')
 
 # Quiz route that dynamically display each quiz
-@app.route('/quiz/<quiz_id', methods=['GET'])
+@app.route('/quiz/<quiz_id>', methods=['GET'])
 def show_quiz(quiz_id):
-  quiz_display_name = quiz_id.replace('_', ' ').title() + "Answers"
+  quiz_display_name = quiz_id.replace('_', ' ').title() + " Answers"
   quiz = next((q for q in quiz_data if q["id"] == quiz_display_name), None)
 
   if not quiz:

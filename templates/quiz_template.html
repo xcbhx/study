@@ -18,13 +18,13 @@
         <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
           {% for option in q.options %}
           <li class="w-full border-b border-gray-200 dark:border-gray-600">
-            <div class="flex items-center ps-3 py-2">
-              <label for="q{{ loop.parent.index }}_{{ loop.index }}" class="flex items-center space-x-2">
+            <div class="flex items-center ps-3 py-1">
+              <label for="q{{ loop.index }}_{{ loop.index }}" class="flex items-center space-x-2">
                 <input 
                   type="radio" 
-                  name="question{{ loop.parent.index }}" 
+                  name="question{{ loop.index }}" 
                   value="{{ option }}" 
-                  id="q{{ loop.parent.index }}_{{ loop.index }}"
+                  id="q{{ loop.index }}_{{ loop.index }}"
                   class="mr-2">
                 <span>{{ option }}</span>
               </label>
