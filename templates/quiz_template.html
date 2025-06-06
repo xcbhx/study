@@ -9,27 +9,29 @@
   <form method="POST" action="/quiz/{{ quiz_id }}/submit">
     <!-- Multiple-Choice Questions -->
     {% for q in questions %}
+      {% set question_loop = loop %}
       <fieldset class="mt-8">
         <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
-          Q{{ loop.index }}. {{ q.question }}
+          Q{{ question_loop.index }}. {{ q.question }}
         </legend>
 
         {% if q.type == "mcq" %}
         <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
           {% for option in q.options %}
-          <li class="w-full border-b border-gray-200 dark:border-gray-600">
-            <div class="flex items-center ps-3 py-1">
-              <label for="q{{ loop.index }}_{{ loop.index }}" class="flex items-center space-x-2">
+            {% set option_loop = loop %}
+            <li class="w-full border-b border-gray-200 dark:border-gray-600">
+              <div class="flex items-center ps-3 py-1">
                 <input 
                   type="radio" 
-                  name="question{{ loop.index }}" 
+                  name="question{{ question_loop.index }}" 
                   value="{{ option }}" 
-                  id="q{{ loop.index }}_{{ loop.index }}"
+                  id="q{{ question_loop.index }}_{{ option_loop.index }}"
                   class="mr-2">
-                <span>{{ option }}</span>
-              </label>
-            </div>
-          </li>
+                <label for="q{{ question_loop.index }}_{{ option_loop.index }}" class="flex items-center space-x-2">
+                  <span>{{ option }}</span>
+                </label>
+              </div>
+            </li>
           {% endfor %}
         </ul>
 
