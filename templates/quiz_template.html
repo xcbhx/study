@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto px-2">
+  <h1 class="text-4xl text-center font-bold dark:text-white mb-8">
+    Quiz: {{ quiz_id.replace('_', ' ').title() }}
+  </h1>
+
+  <form method="POST" action="/quiz/{{ quiz_id }}/submit">
+    <!-- Multiple-Choice Questions -->
+    {% for q in questions %}
+      {% set question_loop = loop %}
+      <fieldset class="mt-8">
+        <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
+          Q{{ question_loop.index }}. {{ q.question }}
+        </legend>
+
+        {% if q.type == "mcq" %}
+        <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+          {% for option in q.options %}
+            {% set option_loop = loop %}
+            <li class="w-full border-b border-gray-200 dark:border-gray-600">
+              <div class="flex items-center ps-3 py-1">
+                <input 
+                  type="radio" 
+                  name="question{{ question_loop.index }}" 
+                  value="{{ option }}" 
+                  id="q{{ question_loop.index }}_{{ option_loop.index }}"
+                  class="mr-2">
+                <label for="q{{ question_loop.index }}_{{ option_loop.index }}" class="flex items-center space-x-2">
+                  <span>{{ option }}</span>
+                </label>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <!-- Written Questions -->
+        {% elif q.type == "written" %}
+        <label for="question{{ loop.index }}">
+          <textarea 
+            name="question{{ loop.index }}"
+            id="question{{ loop.index }}"
+            rows="3" 
+            cols="40" 
+            class="block p-2.5 text-sm text-gray-900 bg-gray-50 resize-x rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+            placeholder="Explain Your Answer">
+          </textarea>
+        </label>
+        {% endif %}
+      </fieldset>
+    {% endfor %}
+
+    <!-- Submit Button -->
+    <div class="text-center m-4">
+      <button type="submit" class="mt-2 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+
+{% endblock %}

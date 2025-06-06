@@ -1,36 +1,66 @@
 [
   {
-    "id":"Intro Algorithms Answer",
+    "id":"Intro To Algorithms Answers",
     "questions": [
       {
-        "id": "question1",
-        "text": "How many steps (at most) does binary search need to find an item in a list of 128 elements?",
-        "answer": "✅ 7"
+        "type": "mcq",
+        "question": "How many steps (at most) does binary search need to find an item in a list of 128 elements?",
+        "options": [
+          "128", 
+          "64", 
+          "7", 
+          "10"
+        ],
+        "answer": "7"
       },
       {
-        "id": "question2",
-        "text": "What is the time complexity of simple (linear) search?",
-        "answer": "✅ O(n)"
+        "type": "mcq",
+        "question": "What is the time complexity of simple (linear) search?",
+        "options": [
+          "O(log n)", 
+          "O(n²)", 
+          "O(n)", 
+          "O(1)"
+        ],
+        "answer": "O(n)"
       },
       {
-        "id": "question3",
-        "text": "Binary search only works on:",
-        "answer": "✅ Sorted lists"
+        "type": "mcq",
+        "question": "Binary search only works on:",
+        "options": [
+          "Unsorted lists", 
+          "Sorted lists", 
+          "Lists with unique elements", 
+          "Lists without duplicates"
+        ],
+        "answer": "Sorted lists"
       },
       {
-        "id": "question4",
-        "text": "If you double the size of the list, how many more steps does binary search add?",
-        "answer": "✅ One. (Because each new power of 2 adds one step to log₂(n))"
+        "type": "mcq",
+        "question": "If you double the size of the list, how many more steps does binary search add?",
+        "options": [
+          "One", 
+          "Two", 
+          "Double the steps", 
+          "None"
+        ],
+        "answer": "One"
       },
       {
-        "id": "question5",
-        "text": "Which of the following is NOT true about binary search?",
-        "answer": "✅ It always checks every item"
+        "type": "mcq",
+        "question": "Which of the following is NOT true about binary search?",
+        "options": [
+          "It eliminates half the list each time", 
+          "It’s efficient for large datasets", 
+          "It always checks every item", 
+          "It only works on sorted data"
+        ],
+        "answer": "It always checks every item"
       },
       {
-        "id": "question6",
-        "text": "Why is binary search considered more efficient than simple search for large datasets? Use an example comparing both.",
-        "answer": "✅ You can describe a scenario like searching through a phonebook of 1,000 names: binary search only needs ~10 steps (log₂(1000) ≈ 10), whereas simple search may take up to 1,000 steps."
+        "type": "written",
+        "question": "Why is binary search considered more efficient than simple search for large datasets? Use an example comparing both.",
+        "answer": "You can describe a scenario like searching through a phonebook of 1,000 names: binary search only needs ~10 steps (log₂(1000) ≈ 10), whereas simple search may take up to 1,000 steps."
       }
     ]
   },
@@ -38,34 +68,64 @@
     "id":"Selection Sort Answers",
     "questions": [
       {
-        "id": "question1",
-        "text": "What is the main idea behind selection sort?",
-        "answer": "✅ Find the smallest item and place it at the beginning"
+        "type": "mcq",
+        "question": "What is the main idea behind selection sort?",
+        "options": [
+          "Find the smallest item",
+          "Swap adjacent elements",
+          "Divide and conquer",
+          "Insert elements in order"
+        ],
+        "answer": "Find the smallest item and place it at the beginning"
       },
       {
-        "id": "question2",
-        "text": "What is the time complexity of selection sort?",
-        "answer": "✅ O(n²)"
+        "type": "mcq",
+        "question": "What is the time complexity of selection sort?",
+        "options": [
+          "O(n)", 
+          "O(log n)",
+          "O(n²)", 
+          "O(n log n)"
+        ],
+        "answer": "O(n²)"
       },
       {
-        "id": "question3",
-        "text": "How many comparisons are made in selection sort for a list of n elements (in the worst case)?",
-        "answer": "✅ n(n - 1)/2"
+        "type": "mcq",
+        "question": "How many comparisons are made in selection sort for a list of n elements (in the worst case)?",
+        "options": [
+          "n", 
+          "n log n", 
+          "n(n - 1)/2", 
+          "O(n²)"
+        ],
+        "answer": "n(n - 1)/2"
       },
       {
-        "id": "question4",
-        "text": "Which of the following best describes the process of selection sort?",
-        "answer": "✅ An in-place algorithm that selects the minimum and swaps it"
+        "type": "mcq",
+        "question": "Which of the following best describes the process of selection sort?",
+        "options": [
+          "Uses a stack",
+          "Recursive partitioning",
+          "An in-place algorithm that selects the minimum and swaps it",
+          "Sorts using hash tables"
+        ],
+        "answer": "An in-place algorithm that selects the minimum and swaps it"
       },
       {
-        "id": "question5",
-        "text": "Why is selection sort generally slower than more advanced sorting algorithms?",
-        "answer": "✅ It performs the same number of comparisons regardless of list order"
+        "type": "mcq",
+        "question": "Why is selection sort generally slower than more advanced sorting algorithms?",
+        "options": [
+          "It uses more memory",
+          "It performs the same number of comparisons regardless of list order",
+          "It can only sort small lists",
+          "It doesn't guarantee sorting"
+        ],
+        "answer": "It performs the same number of comparisons regardless of list order"
       },
       {
-        "id": "question6",
-        "text": "Selection sort always performs the same number of comparisons, even if the list is already sorted. Why is this a disadvantage compared to other sorting algorithms? Provide an example to support your answer.",
-        "answer": "✅ This is a disadvantage because it wastes time comparing elements unnecessarily. For example, in the already sorted list [1, 2, 3, 4, 5], selection sort still compares every pair, resulting in O(n²) time. Other algorithms like bubble sort or insertion sort can stop early or skip unnecessary work, making them faster on nearly-sorted data."
+        "type": "written",
+        "question": "Selection sort always performs the same number of comparisons, even if the list is already sorted. Why is this a disadvantage compared to other sorting algorithms? Provide an example to support your answer.",
+        "answer": "This is a disadvantage because it wastes time comparing elements unnecessarily. For example, in the already sorted list [1, 2, 3, 4, 5], selection sort still compares every pair, resulting in O(n²) time. Other algorithms like bubble sort or insertion sort can stop early or skip unnecessary work, making them faster on nearly-sorted data."
       }
     ]
   },
@@ -73,275 +133,800 @@
     "id":"Recursion Answers",
     "questions": [
       {
-        "id": "question1",
-        "text": "What is the base case in a recursive function?",
-        "answer": "✅ The case where the function stops calling itself"
+        "type": "mcq",
+        "question": "What is the base case in a recursive function?",
+        "options": [
+          "The part that repeats itself",
+        "The first call to the function",
+        "The condition that ends the recursion",
+        "A loop that stops the recursion"
+      ],
+      "answer": "The condition that ends the recursion"
       },
       {
-        "id": "question2",
-        "text": "What happens if a recursive function doesn't reach its base case?",
-        "answer": "✅ It enters infinite recursion and crashes with a stack overflow"
+        "type": "mcq",
+        "question": "What happens if a recursive function doesn't reach its base case?",
+        "options": [
+          "It completes instantly",
+          "It enters infinite recursion and crashes with a stack overflow",
+          "It returns None",
+          "It switches to a loop"
+        ],
+        "answer": "It enters infinite recursion and crashes with a stack overflow"
       },
       {
-        "id": "question3",
-        "text": "What is the main role of the call stack in recursion?",
-        "answer": "✅ It records each function call and where to return afterward"
+        "type": "mcq",
+        "question": "What is the main role of the call stack in recursion?",
+        "options": [
+          "It stores the final result of the function",
+          "It records each function call and where to return afterward",
+          "It tracks all variables in memory",
+          "It performs arithmetic calculations"
+        ],
+        "answer": "It records each function call and where to return afterward"
       },
       {
-        "id": "question4",
-        "text": "What does the call stack do during a recursive function call?",
-        "answer": "✅ It tracks each function call and waits to return until the previous one finishes"
+        "type": "mcq",
+        "question": "What does the call stack do during a recursive function call?",
+        "options": [
+          "It skips all intermediate steps",
+          "It runs the base case directly",
+          "It tracks each function call and waits to return until the previous one finishes",
+          "It prevents the function from looping"
+        ],
+        "answer": "It tracks each function call and waits to return until the previous one finishes"
       },
       {
-        "id": "question5",
-        "text": "Which problem is often solved naturally using recursion?",
-        "answer": "✅ Finding factorial of a number"
+        "type": "mcq",
+        "question": "Which problem is often solved naturally using recursion?",
+        "options": [
+          "Searching through a sorted array",
+          "Calculating the factorial of a number",
+          "Adding two numbers",
+          "Reading a file line by line"
+        ],
+        "answer": "Calculating the factorial of a number"
       },
       {
-        "id": "question6",
-        "text": "In your own words, explain how recursion works. Why does a recursive function need both a base case and a recursive case?",
-        "answer": "✅ Recursion is when a function calls itself to solve smaller parts of a problem. It needs a base case to stop the recursion and return a value, and a recursive case to keep breaking the problem down. Without the base case, the function would call itself forever and crash."
+        "type": "written",
+        "question": "In your own words, explain how recursion works. Why does a recursive function need both a base case and a recursive case?",
+        "answer": "Recursion is when a function calls itself to solve smaller parts of a problem. It needs a base case to stop the recursion and return a value, and a recursive case to keep breaking the problem down. Without the base case, the function would call itself forever and crash."
       }
     ]
   },
   {
-    "id":"Quicksort Answers",
+    "id": "Quicksort Answers",
     "questions": [
       {
-        "id": "question1",
-        "text": "What is the primary concept behind the Quicksort algorithm?",
-        "answer": "✅ Quicksort uses a pivot to partition the array into two subarrays: one with elements smaller than the pivot and one with larger elements. It then recursively sorts these partitions."
+        "type": "mcq",
+        "question": "What is the primary concept behind the Quicksort algorithm?",
+        "options": [
+          "It compares every element to each other and sorts them directly",
+          "It merges sorted halves into a full list",
+          "It uses a pivot to divide the list and recursively sort each side",
+          "It places the largest item at the end on each pass"
+        ],
+        "answer": "It uses a pivot to divide the list and recursively sort each side"
       },
       {
-        "id": "question2",
-        "text": "What is the average time complexity of Quicksort?",
-        "answer": "✅ Quicksort has an average time complexity of O(n log n) due to its divide-and-conquer approach. However, in the worst case, it can degrade to O(n²) if the pivot selection is poor."
+        "type": "mcq",
+        "question": "What is the average time complexity of Quicksort?",
+        "options": [
+          "O(n²)",
+          "O(log n)",
+          "O(n)",
+          "O(n log n)"
+        ],
+        "answer": "O(n log n)"
       },
       {
-        "id": "question3",
-        "text": "Which scenario could lead to the worst-case time complexity in Quicksort?",
-        "answer": "✅ The worst-case scenario for Quicksort happens when the pivot consistently results in unbalanced partitions, particularly when the pivot is the smallest or largest element. This leads to a time complexity of O(n²)."
+        "type": "mcq",
+        "question": "Which scenario could lead to the worst-case time complexity in Quicksort?",
+        "options": [
+          "Choosing a pivot that always results in unbalanced partitions",
+          "Using it on a small dataset",
+          "Using it on data with many duplicates",
+          "Sorting a list that’s already sorted"
+        ],
+        "answer": "Choosing a pivot that always results in unbalanced partitions"
       },
       {
-        "id": "question4",
-        "text": "Why is choosing a good pivot important in Quicksort?",
-        "answer": "✅ It helps divide the array into balanced partitions, improving efficiency."
+        "type": "mcq",
+        "question": "Why is choosing a good pivot important in Quicksort?",
+        "options": [
+          "It reduces the need for recursion",
+          "It helps divide the array into balanced partitions, improving efficiency",
+          "It allows the algorithm to sort in linear time",
+          "It avoids merging steps"
+        ],
+        "answer": "It helps divide the array into balanced partitions, improving efficiency"
       },
       {
-        "id": "question5",
-        "text": "What strategy can improve Quicksort's performance on nearly sorted or bad pivot inputs?",
-        "answer": "✅ Choose a random pivot"
+        "type": "mcq",
+        "question": "What strategy can improve Quicksort's performance on nearly sorted or bad pivot inputs?",
+        "options": [
+          "Always use the last element as pivot",
+          "Use a loop instead of recursion",
+          "Choose a random pivot",
+          "Sort only half the list at a time"
+        ],
+        "answer": "Choose a random pivot"
       },
       {
-        "id": "question6",
-        "text": "How does the choice of pivot affect Quicksort's performance, and what strategies can be used to improve pivot selection?",
-        "answer": "✅ The choice of pivot directly impacts Quicksort's efficiency. If the pivot results in balanced partitions, the algorithm performs closer to its average time complexity of O(n log n). Poor pivot selection (e.g., always choosing the first or last element) can lead to O(n²) time complexity. Strategies to improve pivot selection include choosing the median of three elements (first, middle, and last) or selecting a random pivot to reduce the chance of worst-case performance."
+        "type": "written",
+        "question": "How does the choice of pivot affect Quicksort's performance, and what strategies can be used to improve pivot selection?",
+        "answer": "The choice of pivot directly impacts Quicksort's efficiency. If the pivot results in balanced partitions, the algorithm performs closer to its average time complexity of O(n log n). Poor pivot selection (e.g., always choosing the first or last element) can lead to O(n²) time complexity. Strategies to improve pivot selection include choosing the median of three elements (first, middle, and last) or selecting a random pivot to reduce the chance of worst-case performance."
       }
     ]
   },
   {
-    "id":"Hash Table Answer",
-    "question1": "✅ B: Hash tables provide O(1) average time complexity for lookups, insertions, and deletions, making them extremely efficient for quick data retrieval.",
-    "question2": "✅ C: A hash collision occurs when two keys hash to the same index in a hash table. This can be resolved using methods like chaining (linked lists at each index) or open addressing (probing for the next available slot).",
-    "question3": "✅ C: The worst-case time complexity is O(n) when all keys hash to the same index (causing a long chain in separate chaining or many probes in open addressing). However, with a good hash function and low load factor, the average time remains O(1).",
-    "question4": "Answer: A hash function takes an input (key) and converts it into a fixed-size numerical index that maps to a position in the hash table. A good hash function distributes keys evenly across the table to minimize collisions, ensuring fast lookups, insertions, and deletions. Poor hash functions lead to clustering, which degrades performance.",
-    "question5": "Answer: Two common collision-handling strategies are: Separate Chaining – Store multiple key-value pairs at the same index using a linked list. Open Addressing – Find an empty slot using techniques like linear probing (checking the next available index) or quadratic probing (checking indices based on a formula). Using a better hash function and maintaining a low load factor (entries/table size) also helps reduce collisions."
-  },
-  {
-    "id": "ch1_ch5 Answer",
+    "id":"Hash Table Answers",
     "questions": [
       {
-        "id": "question1",
-        "text": "How does binary search work?",
-        "answer": "✅ It repeatedly divides a sorted list in half to find an element."
+        "type": "mcq",
+        "question": "Why are hash tables considered efficient for lookups?",
+        "options": [
+          "O(n²) complexity",
+          "Require sorted data",
+          "O(1) average lookup time",
+          "Use linear search"
+        ],
+        "answer": "Hash tables provide O(1) average time complexity for lookups, insertions, and deletions, making them extremely efficient for quick data retrieval."
       },
       {
-        "id": "question2",
-        "text": "Why is Quicksort generally faster than Selection Sort?",
-        "answer": "✅ It has an average time complexity of O(n log n), while Selection Sort is O(n²)."
+        "type": "mcq",
+        "question": "What happens when two keys hash to the same index?",
+        "options": [
+          "They overwrite each other",
+          "The table resizes",
+          "A collision occurs",
+          "They are deleted"
+        ],
+        "answer": "A hash collision occurs when two keys hash to the same index in a hash table. This can be resolved using methods like chaining (linked lists at each index) or open addressing (probing for the next available slot)."
       },
       {
-        "id": "question3",
-        "text": "What is a hash table?",
-        "answer": "✅ A data structure that stores key-value pairs and provides fast lookups using a hash function."
+        "type": "mcq",
+        "question": "What is the worst-case time complexity of a hash table lookup?",
+        "options": [
+          "O(1)",
+          "O(log n)",
+          "O(n)",
+          "O(n log n)"
+        ],
+        "answer": "The worst-case time complexity is O(n) when all keys hash to the same index (causing a long chain in separate chaining or many probes in open addressing). However, with a good hash function and low load factor, the average time remains O(1)."
       },
       {
-        "id": "question4",
-        "text": "What is the time complexity of looking up a key in a hash table (on average)?",
-        "answer": "✅ O(1)"
+        "type": "mcq",
+        "question": "What is a hash function and why is it important?",
+        "options": [
+          "A way to search linearly",
+          "A recursive function",
+          "Maps a key to an index",
+          "Divides a list into halves"
+        ],
+        "answer": "A hash function takes an input (key) and converts it into a fixed-size numerical index that maps to a position in the hash table. A good hash function distributes keys evenly across the table to minimize collisions, ensuring fast lookups, insertions, and deletions."
       },
       {
-        "id": "question5",
-        "text": "What are two common techniques to handle collisions in a hash table?",
-        "answer": "✅ Separate chaining or open addressing"
+        "type": "mcq",
+        "question": "What are two strategies for handling collisions in a hash table?",
+        "options": [
+          "Merging and Sorting",
+          "Binary Search and Shuffling",
+          "Chaining and Open Addressing",
+          "Tree Traversal and Stack Pushing"
+        ],
+        "answer": "Two common collision-handling strategies are: Separate Chaining \u2013 Store multiple key-value pairs at the same index using a linked list. Open Addressing \u2013 Find an empty slot using techniques like linear probing (checking the next available index) or quadratic probing (checking indices based on a formula)."
       },
       {
-        "id": "question6",
-        "text": "Why do hash tables use hash functions?",
-        "answer": "✅ To efficiently map keys to a specific index"
-      },
-      {
-        "id": "question7",
-        "text": "What is the average time complexity of Quicksort?",
-        "answer": "✅ O(n log n)"
-      },
-      {
-        "id": "question8",
-        "text": "What is a prerequisite for binary search to work correctly?",
-        "answer": "✅ The list must be sorted."
-      },
-      {
-        "id": "question9",
-        "text": "What is the time complexity of binary search?",
-        "answer": "✅ O(log n)"
-      },
-      {
-        "id": "question10",
-        "text": "What is the worst-case time complexity of Selection Sort?",
-        "answer": "✅ O(n²)"
-      },
-      {
-        "id": "question11",
-        "text": "Describe how binary search works using the array [2, 4, 7, 10, 15, 20, 25]. Search for the number 15 and explain each step.",
-        "answer": "✅ 1. Check middle (10) → too small. 2. Check right half [15, 20, 25]. Middle is 20 → too big. 3. Left of 20 is 15 → found. Binary search cuts the list in half each time."
-      },
-      {
-        "id": "question12",
-        "text": "Walk through the steps of Selection Sort for the array [29, 10, 14, 37, 13].",
-        "answer": "✅ Swap 10 with 29 → [10, 29, 14, 37, 13]. Swap 13 with 29 → [10, 13, 14, 37, 29]. Continue until sorted → [10, 13, 14, 29, 37]."
-      },
-      {
-        "id": "question13",
-        "text": "Explain why Quicksort is often preferred over Merge Sort despite both having O(n log n) average time complexity.",
-        "answer": "✅ Quicksort sorts in-place and typically requires less memory and fewer operations in practice, making it faster."
-      },
-      {
-        "id": "question14",
-        "text": "Explain how a hash table can be used to efficiently store and retrieve student grades.",
-        "answer": "✅ Use student IDs as keys and grades as values. Hashing provides O(1) access for insertions and lookups."
-      },
-      {
-        "id": "question15",
-        "text": "Why is a poor hash function problematic for a hash table? What issues can it cause?",
-        "answer": "✅ Poor hash functions lead to many collisions, slowing down access time and reducing efficiency."
+        "type": "written",
+        "question": "Explain how a hash table stores and retrieves values efficiently, and how it handles collisions.",
+        "answer": "Hash tables use a hash function to map keys to indexes in an array. If a collision occurs, it uses strategies like chaining or open addressing to resolve it. This design allows for O(1) average case insertions, deletions, and lookups."
       }
     ]
   },
   {
-    "id":"Breadth-First Search Answer",
+    "id": "Ch.1-Ch.5 Answers",
     "questions": [
       {
-        "id": "question1",
-        "text": "What is Breadth-First Search (BFS), and how does it work?",
-        "answer": "✅ A traversal algorithm that explores all neighbors of a node before moving to the next level using a queue"
+        "type": "mcq",
+        "question": "How does binary search work?",
+        "options": [
+          "It checks every element in order until it finds the target.",
+          "It starts from the end and moves backward.",
+          "It repeatedly divides a sorted list in half to find an element.",
+          "It builds a tree of comparisons before searching."
+        ],
+        "answer": "It repeatedly divides a sorted list in half to find an element."
       },
       {
-        "id": "question2",
-        "text": "In what scenarios would you use BFS instead of Depth-First Search (DFS)?",
-        "answer": "✅ When you need to find the shortest path in an unweighted graph."
+        "type": "mcq",
+        "question": "Why is Quicksort generally faster than Selection Sort?",
+        "options": [
+          "It doesn’t use recursion.",
+          "It has an average time complexity of O(n log n), while Selection Sort is O(n²).",
+          "It only compares adjacent elements.",
+          "It skips over sorted sections."
+        ],
+        "answer": "It has an average time complexity of O(n log n), while Selection Sort is O(n²)."
       },
       {
-        "id": "question3",
-        "text": "How does BFS ensure the shortest path is found in an unweighted graph?",
-        "answer": "✅ It explores nodes level by level, guaranteeing the first time it finds a node is via the shortest path"
+        "type": "mcq",
+        "question": "What is a hash table?",
+        "options": [
+          "A table that stores values in sorted order.",
+          "A matrix used for graph traversal.",
+          "A data structure that stores key-value pairs and provides fast lookups using a hash function.",
+          "A list that uses binary search internally."
+        ],
+        "answer": "A data structure that stores key-value pairs and provides fast lookups using a hash function."
       },
       {
-        "id": "question4",
-        "text": "What data structures are commonly used to implement BFS, and why?",
-        "answer": "✅ Queue and Set, because they ensure nodes are processed in order and avoid revisiting"
+        "type": "mcq",
+        "question": "What is the time complexity of looking up a key in a hash table (on average)?",
+        "options": [
+          "O(n²)",
+          "O(n)",
+          "O(log n)",
+          "O(1)"
+        ],
+        "answer": "O(1)"
       },
       {
-        "id": "question5",
-        "text": "Describe how you would apply BFS to find the shortest path from node A to node G in a simple graph.",
-        "answer": "✅ Use a queue to explore each level of neighbors from A and stop when G is found"
+        "type": "mcq",
+        "question": "What are two common techniques to handle collisions in a hash table?",
+        "options": [
+          "Linear merging and divide-and-conquer",
+          "Depth-first and breadth-first probing",
+          "Separate chaining or open addressing",
+          "Pivot swapping and tree rotation"
+        ],
+        "answer": "Separate chaining or open addressing"
       },
       {
-        "id": "question6",
-        "text": "Why is it important to keep track of the people you've already searched in a BFS algorithm? What problem does this prevent?",
-        "answer": "✅ Its important to track people you've already searched to prevent infinite loops, especially in graphs with cycles. Without this, you could end up rechecking the same nodes multiple times, wasting time or even causing the algorithm to never finish."
+        "type": "mcq",
+        "question": "Why do hash tables use hash functions?",
+        "options": [
+          "To maintain sorted order",
+          "To prevent collisions",
+          "To efficiently map keys to a specific index",
+          "To reverse lookup values"
+        ],
+        "answer": "To efficiently map keys to a specific index"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the average time complexity of Quicksort?",
+        "options": [
+          "O(n²)",
+          "O(log n)",
+          "O(n log n)",
+          "O(1)"
+        ],
+        "answer": "O(n log n)"
+      },
+      {
+        "type": "mcq",
+        "question": "What is a prerequisite for binary search to work correctly?",
+        "options": [
+          "The list must be sorted.",
+          "The list must contain only unique elements.",
+          "The list must have an even number of elements.",
+          "The list must be implemented using a tree."
+        ],
+        "answer": "The list must be sorted."
+      },
+      {
+        "type": "mcq",
+        "question": "What is the time complexity of binary search?",
+        "options": [
+          "O(n)",
+          "O(n log n)",
+          "O(log n)",
+          "O(n²)"
+        ],
+        "answer": "O(log n)"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the worst-case time complexity of Selection Sort?",
+        "options": [
+          "O(n log n)",
+          "O(n)",
+          "O(log n)",
+          "O(n²)"
+        ],
+        "answer": "O(n²)"
+      },
+      {
+        "type": "written",
+        "question": "Describe how binary search works using the array [2, 4, 7, 10, 15, 20, 25]. Search for the number 15 and explain each step.",
+        "answer": "1. Check middle (10) → too small. 2. Check right half [15, 20, 25]. Middle is 20 → too big. 3. Left of 20 is 15 → found. Binary search cuts the list in half each time."
+      },
+      {
+        "type": "written",
+        "question": "Walk through the steps of Selection Sort for the array [29, 10, 14, 37, 13].",
+        "answer": "Swap 10 with 29 → [10, 29, 14, 37, 13]. Swap 13 with 29 → [10, 13, 14, 37, 29]. Continue until sorted → [10, 13, 14, 29, 37]."
+      },
+      {
+        "type": "written",
+        "question": "Explain why Quicksort is often preferred over Merge Sort despite both having O(n log n) average time complexity.",
+        "answer": "Quicksort sorts in-place and typically requires less memory and fewer operations in practice, making it faster."
+      },
+      {
+        "type": "written",
+        "question": "Explain how a hash table can be used to efficiently store and retrieve student grades.",
+        "answer": "Use student IDs as keys and grades as values. Hashing provides O(1) access for insertions and lookups."
+      },
+      {
+        "type": "written",
+        "question": "Why is a poor hash function problematic for a hash table? What issues can it cause?",
+        "answer": "Poor hash functions lead to many collisions, slowing down access time and reducing efficiency."
       }
     ]
   },
-    {
-    "id":"Dijkstras Algorithm Answer",
+  {
+    "id":"Breadth-First Search Answers",
     "questions": [
       {
-        "id": "question1",
-        "text": "What is Dijkstra’s algorithm used for?",
-        "answer": "✅ Finding the shortest path in a graph with non-negative weights"
+        "type": "mcq",
+        "question": "What is Breadth-First Search (BFS), and how does it work?",
+        "options": [
+          "A traversal algorithm that uses a stack to explore as far as possible along each branch before backtracking",
+          "A traversal algorithm that randomly visits nodes",
+          "A traversal algorithm that explores all neighbors of a node before moving to the next level using a queue",
+          "An algorithm that explores only the leftmost branch of a tree"
+        ],
+        "answer": "A traversal algorithm that explores all neighbors of a node before moving to the next level using a queue"
       },
       {
-        "id": "question2",
-        "text": "What data structure is typically used to track the current shortest distances to each node?<",
-        "answer": "✅ A hash table (dictionary)"
+        "type": "mcq",
+        "question": "In what scenarios would you use BFS instead of Depth-First Search (DFS)?",
+        "options": [
+          "When you're searching very deep trees",
+          "When you need to find the shortest path in an unweighted graph.",
+          "When you want to explore paths in alphabetical order",
+          "When the graph is weighted and needs shortest path calculations"
+        ],
+        "answer": "When you need to find the shortest path in an unweighted graph."
       },
       {
-        "id": "question3",
-        "text": "What is the first step of Dijkstra’s algorithm?",
-        "answer": "✅ Initialize costs and parents table"
+        "type": "mcq",
+        "question": "How does BFS ensure the shortest path is found in an unweighted graph?",
+        "options": [
+          "It checks each node multiple times to find the best path",
+          "It assigns weights to each edge to determine the shortest route",
+          "It explores nodes randomly and picks the fastest route",
+          "It explores nodes level by level, guaranteeing the first time it finds a node is via the shortest path"
+        ],
+        "answer": "It explores nodes level by level, guaranteeing the first time it finds a node is via the shortest path"
       },
       {
-        "id": "question4",
-        "text": "When does Dijkstra’s algorithm stop?",
-        "answer": "✅ When the shortest path to all nodes has been determined"
+        "type": "mcq",
+        "question": "What data structures are commonly used to implement BFS, and why?",
+        "options": [
+          "Stack and List, because they allow deep exploration",
+          "Queue and Set, because they ensure nodes are processed in order and avoid revisiting",
+          "Dictionary and Heap, for sorting neighbors by value",
+          "Array and Tree, because they preserve the graph structure"
+        ],
+        "answer": "Queue and Set, because they ensure nodes are processed in order and avoid revisiting"
       },
       {
-        "id": "question5",
-        "text": "Which of the following is a limitation of Dijkstra’s algorithm?",
-        "answer": "✅ It does not work with graphs that have negative weights"
+        "type": "mcq",
+        "question": "Describe how you would apply BFS to find the shortest path from node A to node G in a simple graph.",
+        "options": [
+          "Use a depth-first search to explore each branch until G is found",
+          "Use a random traversal and backtrack when needed",
+          "Use a priority queue to always choose the lowest-cost neighbor",
+          "Use a queue to explore each level of neighbors from A and stop when G is found"
+        ],
+        "answer": "Use a queue to explore each level of neighbors from A and stop when G is found"
       },
       {
-        "id": "question6",
-        "text": "Explain how Dijkstra’s algorithm determines the shortest path from a start node to a finish node. What is the role of the \"costs\" and \"parents\" tables?",
-        "answer": "✅ Dijkstra’s algorithm starts by assigning a cost of 0 to the starting node and infinity to all others. It uses the costs table to track the shortest known distance to each node and the parents table to record the best parent to reach that node. It repeatedly visits the unvisited node with the lowest cost, updates the costs of its neighbors if a cheaper path is found, and marks it as visited. This continues until all nodes are visited or the destination node has the shortest path determined."
+        "type": "written",
+        "question": "Why is it important to keep track of the people you've already searched in a BFS algorithm? What problem does this prevent?",
+        "answer": "It's important to track people you've already searched to prevent infinite loops, especially in graphs with cycles. Without this, you could end up rechecking the same nodes multiple times, wasting time or even causing the algorithm to never finish."
       }
     ]
   },
   {
-    "id":"Greedy Algorithm Answer",
-    "question1": "✅ Always choose the option that looks best at the moment. Explanation: Greedy algorithms work by making the best local choice at each step, hoping that these choices lead to the best overall (global) solution. ",
-    "question2": "✅ Set cover problem. Explanation: The set cover problem is a common example of a problem approached using greedy logic — picking the set (e.g., a radio station) that covers the most uncovered items (e.g., states) until everything is covered.",
-    "question3": "✅ They don't always give the optimal solution. Explanation: Greedy algorithms don’t look ahead or reconsider choices, so they may miss the globally best solution even though they’re fast and easy to implement",
-    "question4": "✅ A group of states a radio station can cover. Explanation: Each station in the book’s example is a radio station, and it can broadcast to a set of states. The goal is to choose the fewest stations that together reach all the needed states.",
-    "question5": "✅ When the problem has the greedy-choice property. Explanation: The greedy-choice property means that local choices lead to a global optimum — which is exactly what greedy algorithms depend on to be correct. ",
-    "question6": "✅ The greedy strategy in the set cover problem selects the station that covers the largest number of uncovered states at each step. It continues until all states are covered. This approach doesn’t guarantee the optimal solution, but it often gets close because it reduces the uncovered portion of the problem as quickly as possible. It works well in practice for large problems where finding the perfect solution would take too long (NP-complete problems)"
+    "id":"Dijkstras Algorithm Answers",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "What is Dijkstra’s algorithm used for?",
+        "options": [
+          "Finding the longest path in a graph",
+          "Finding the minimum spanning tree",
+          "Finding the shortest path in a graph with non-negative weights",
+          "Sorting nodes by value"
+        ],
+        "answer": "Finding the shortest path in a graph with non-negative weights"
+      },
+      {
+        "type": "mcq",
+        "question": "What data structure is typically used to track the current shortest distances to each node?",
+        "options": [
+          "A stack",
+          "A hash table (dictionary)",
+          "A list of visited nodes",
+          "A binary tree"
+        ],
+        "answer": "A hash table (dictionary)"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the first step of Dijkstra’s algorithm?",
+        "options": [
+          "Add all nodes to a priority queue",
+          "Remove nodes with the longest paths",
+          "Initialize costs and parents table",
+          "Mark all nodes as visited"
+        ],
+        "answer": "Initialize costs and parents table"
+      },
+      {
+        "type": "mcq",
+        "question": "When does Dijkstra’s algorithm stop?",
+        "options": [
+          "When the queue is empty",
+          "When it reaches the last node alphabetically",
+          "When the graph has been converted to a tree",
+          "When the shortest path to all nodes has been determined"
+        ],
+        "answer": "When the shortest path to all nodes has been determined"
+      },
+      {
+        "type": "mcq",
+        "question": "Which of the following is a limitation of Dijkstra’s algorithm?",
+        "options": [
+          "It does not work with graphs that have negative weights",
+          "It can only handle graphs with one path between each pair of nodes",
+          "It requires that all paths be the same length",
+          "It only works for directed graphs"
+        ],
+        "answer": "It does not work with graphs that have negative weights"
+      },
+      {
+        "type": "written",
+        "question": "Explain how Dijkstra’s algorithm determines the shortest path from a start node to a finish node. What is the role of the \"costs\" and \"parents\" tables?",
+        "answer": "Dijkstra’s algorithm starts by assigning a cost of 0 to the starting node and infinity to all others. It uses the costs table to track the shortest known distance to each node and the parents table to record the best parent to reach that node. It repeatedly visits the unvisited node with the lowest cost, updates the costs of its neighbors if a cheaper path is found, and marks it as visited. This continues until all nodes are visited or the destination node has the shortest path determined."
+      }
+    ]
   },
   {
-    "id":"Dynamic Programming Answer",
-    "question1": "✅ Subproblems and builds up to solving the big problem.",
-    "question2": "✅ Subproblems that are solved multiple times if not approached carefully.",
-    "question3": "✅ To avoid redundant computations and improve efficiency.",
-    "question4": "✅ Optimize something given a constraint.",
-    "question5": "✅ To store the intermediate results or solutions to subproblems.",
-    "question6": "✅ The general strategy behind dynamic programming involves breaking down a complex problem into a collection of smaller subproblems. Instead of solving the same subproblems repeatedly, dynamic programming solves each subproblem only once and stores its solution, typically in a table or grid. These stored solutions are then looked up and reused when needed to solve larger subproblems, eventually leading to the solution of the original problem."
+    "id": "Greedy Algorithm Answers",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "What is the general strategy behind a greedy algorithm?",
+        "options": [
+          "Make a random choice at each step",
+          "Always choose the option that looks best at the moment",
+          "Look at all possible outcomes before choosing",
+          "Choose the worst option to avoid greedy behavior"
+        ],
+        "answer": "Always choose the option that looks best at the moment"
+      },
+      {
+        "type": "mcq",
+        "question": "Which classic problem is commonly solved using a greedy algorithm?",
+        "options": [
+          "Binary Search",
+          "Set cover problem",
+          "Dynamic programming",
+          "Merge sort"
+        ],
+        "answer": "Set cover problem"
+      },
+      {
+        "type": "mcq",
+        "question": "What is a potential downside of greedy algorithms?",
+        "options": [
+          "They always give incorrect answers",
+          "They don't always give the optimal solution",
+          "They take too long to run",
+          "They require recursion"
+        ],
+        "answer": "They don't always give the optimal solution"
+      },
+      {
+        "type": "mcq",
+        "question": "What does each station represent in the greedy set cover problem?",
+        "options": [
+          "A node in a graph",
+          "A group of states a radio station can cover",
+          "A hash function",
+          "A recursive function"
+        ],
+        "answer": "A group of states a radio station can cover"
+      },
+      {
+        "type": "mcq",
+        "question": "When is it appropriate to use a greedy algorithm?",
+        "options": [
+          "When the problem has the greedy-choice property",
+          "When brute force is too slow",
+          "When recursion is not available",
+          "When space is unlimited"
+        ],
+        "answer": "When the problem has the greedy-choice property"
+      },
+      {
+        "type": "written",
+        "question": "Explain how the greedy algorithm works in the set cover problem. Why does it work well in practice, even if it\u2019s not optimal?",
+        "answer": "The greedy strategy selects the station that covers the largest number of uncovered states at each step until all states are covered. This approach doesn\u2019t guarantee the optimal solution, but it reduces the uncovered portion of the problem quickly and works well for large problems where perfect solutions are too slow to find."
+      }
+    ]
   },
   {
-    "id":"K-nearest Neighbors Answer",
-    "question1": "✅ KNN is a method for both categorizing items (classification) and predicting numerical values (regression) by examining nearby data points.",
-    "question2": "✅ Convert each item into a set of numerical measurements or features.",
-    "question3": "✅ Feature extraction.",
-    "question4": "✅ Measurable characteristics or attributes that effectively represent the data.",
-    "question5": "✅ Because the measure of similarity between data points directly depends on the features used for comparison; poor features can lead to inaccurate results.",
-    "question6": "✅ Determining the proximity or similarity between data points is crucial for the K-Nearest Neighbors algorithm. The algorithm predicts the category or value of a new data point by examining the categories or values of the most similar, previously seen data points. This measure of closeness allows the algorithm to infer that similar data points are likely to have similar outcomes."
+    "id": "Dynamic Programming Answers",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "What concept does dynamic programming rely on?",
+        "options": [
+          "Greedy choices",
+          "Subproblems and builds up to solving the big problem",
+          "Recursion with infinite loops",
+          "Sorting algorithms"
+        ],
+        "answer": "Subproblems and builds up to solving the big problem"
+      },
+      {
+        "type": "mcq",
+        "question": "What issue can arise if subproblems are not handled carefully in dynamic programming?",
+        "options": [
+          "The program runs out of memory",
+          "The program solves the wrong problem",
+          "Subproblems are solved multiple times",
+          "It cannot handle integers"
+        ],
+        "answer": "Subproblems are solved multiple times"
+      },
+      {
+        "type": "mcq",
+        "question": "Why is memoization used in dynamic programming?",
+        "options": [
+          "To slow down the algorithm",
+          "To avoid redundant computations and improve efficiency",
+          "To randomly select paths",
+          "To sort data"
+        ],
+        "answer": "To avoid redundant computations and improve efficiency"
+      },
+      {
+        "type": "mcq",
+        "question": "What type of problems is dynamic programming commonly used to solve?",
+        "options": [
+          "Problems without constraints",
+          "Optimize something given a constraint",
+          "Only recursive problems",
+          "Simple loops"
+        ],
+        "answer": "Optimize something given a constraint"
+      },
+      {
+        "type": "mcq",
+        "question": "What is stored in dynamic programming to reuse solutions?",
+        "options": [
+          "The final output only",
+          "Debug messages",
+          "Intermediate results or solutions to subproblems",
+          "Just the problem statement"
+        ],
+        "answer": "Intermediate results or solutions to subproblems"
+      },
+      {
+        "type": "written",
+        "question": "Explain the general strategy behind dynamic programming and why it is efficient.",
+        "answer": "Dynamic programming solves each subproblem once and stores its solution, typically in a table or grid. These stored solutions are then looked up and reused, avoiding repeated calculations and improving efficiency."
+      }
+    ]
   },
-    {
-    "id":"ch6_ch10 Answer",
-    "question1": "✅ Queue",
-    "question2": "✅ A queue is FIFO (First In, First Out), while a stack is LIFO (Last In, First Out)",
-    "question3": "✅ Graphs with non-negative edge weights",
-    "question4": "✅ It stores the current shortest known distance to each node",
-    "question5": "✅ Always make the locally optimal choice at each step",
-    "question6": "✅ They are always slower than other approaches",
-    "question7": "✅ It solves and stores subproblems to avoid repeating work",
-    "question8": "✅ A grid or table",
-    "question9": "✅ Use nearby data points to predict the category or value of a new item",
-    "question10": "✅ Because KNN uses those features to measure distance and similarity",
-    "question11": "✅ BFS uses a queue to explore nodes level by level, starting from the source node. It visits all neighbors of a node before moving to the next layer of neighbors. Because it checks nodes in order of distance, the first time it reaches a node is always via the shortest path in an unweighted graph. This is why it guarantees the shortest path.",
-    "question12": "✅ The costs table keeps track of the shortest known distance from the starting node to every other node. The parents table records the previous node for each path, so you can reconstruct the full shortest path at the end. As the algorithm runs, it updates both tables whenever it finds a cheaper path to a node.",
-    "question13": "✅ Greedy algorithms work well for problems where making the best local choice at each step leads to a globally optimal solution. For example, in the coin change problem (using the fewest coins), if the coin values are set up properly, choosing the largest coin that fits works. This strategy works when the problem has the greedy-choice property.",
-    "question14": "✅ Dynamic programming breaks a big problem into smaller overlapping subproblems. It solves each subproblem once and stores the result in a table (usually a grid), then reuses those results instead of recalculating them. This avoids redundant work and makes the algorithm much more efficient, especially for problems with repeated calculations.",
-    "question15": "✅ In KNN, features are the measurable characteristics used to compare data points. Good features accurately reflect what makes items similar or different. If the features aren’t relevant or meaningful, the distance calculations will be off, and the algorithm may choose the wrong neighbors—leading to bad predictions."
-
-
+  {
+    "id": "K-Nearest Neighbors Answers",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "What is KNN used for?",
+        "options": [
+          "Sorting arrays",
+          "Both classification and regression",
+          "Hashing data",
+          "Dynamic optimization"
+        ],
+        "answer": "Both classification and regression"
+      },
+      {
+        "type": "mcq",
+        "question": "How are items prepared for comparison in KNN?",
+        "options": [
+          "Using recursion",
+          "Converting each item into numerical measurements or features",
+          "Hashing keys",
+          "Sorting them"
+        ],
+        "answer": "Converting each item into numerical measurements or features"
+      },
+      {
+        "type": "mcq",
+        "question": "What is feature extraction in KNN?",
+        "options": [
+          "Removing bad data",
+          "Turning data into useful measurable characteristics",
+          "Making random predictions",
+          "Classifying binary numbers"
+        ],
+        "answer": "Turning data into useful measurable characteristics"
+      },
+      {
+        "type": "mcq",
+        "question": "Why are good features important in KNN?",
+        "options": [
+          "They increase speed",
+          "They help sorting algorithms",
+          "They help improve accuracy by providing better similarity measures",
+          "They simplify recursion"
+        ],
+        "answer": "They help improve accuracy by providing better similarity measures"
+      },
+      {
+        "type": "mcq",
+        "question": "What does KNN rely on to make predictions?",
+        "options": [
+          "Random forest",
+          "The class of the farthest neighbor",
+          "The similarity between nearby data points",
+          "Hash table lookup"
+        ],
+        "answer": "The similarity between nearby data points"
+      },
+      {
+        "type": "written",
+        "question": "How does KNN use feature similarity to make predictions?",
+        "answer": "KNN measures how close a new data point is to known points using features. It then predicts the label or value of the new point based on the most similar (nearest) neighbors' labels or values."
+      }
+    ]
+  },
+  {
+    "id":"Ch.6-Ch.10 Answers",
+    "questions": [
+      {
+        "type": "mcq",
+        "question": "Which data structure does Breadth-First Search (BFS) use to keep track of nodes to visit next?",
+        "options": [
+          "Stack", 
+          "Queue", 
+          "Tree", 
+          "Graph"
+        ],
+        "answer": "Queue"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the main difference between a queue and a stack?",
+        "options": [
+          "A queue is LIFO and a stack is FIFO",
+          "A queue stores only strings, a stack stores integers",
+          "A queue is FIFO (First In, First Out), while a stack is LIFO (Last In, First Out)",
+          "A queue allows insertion from both ends"
+        ],
+        "answer": "A queue is FIFO (First In, First Out), while a stack is LIFO (Last In, First Out)"
+      },
+      {
+        "type": "mcq",
+        "question": "Dijkstra’s algorithm works on which kind of graphs?",
+        "options": [
+          "Graphs with negative edge weights",
+          "Graphs with no edges",
+          "Graphs with cycles only",
+          "Graphs with non-negative edge weights"
+        ],
+        "answer": "Graphs with non-negative edge weights"
+      },
+      {
+        "type": "mcq",
+        "question": "What does the 'costs' table in Dijkstra’s algorithm represent?",
+        "options": [
+          "It stores the number of neighbors of each node",
+          "It lists visited nodes in order",
+          "It stores the current shortest known distance to each node",
+          "It identifies the previous node in the path"
+        ],
+        "answer": "It stores the current shortest known distance to each node"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the key idea behind a greedy algorithm?",
+        "options": [
+          "Try all possible solutions and pick the best",
+          "Always make the locally optimal choice at each step",
+          "Recurse until a solution is found",
+          "Use a stack to backtrack"
+        ],
+        "answer": "Always make the locally optimal choice at each step"
+      },
+      {
+        "type": "mcq",
+        "question": "Which of the following is NOT true about greedy algorithms?",
+        "options": [
+          "They work well on problems with the greedy-choice property",
+          "They don’t always produce the optimal solution",
+          "They are always slower than other approaches",
+          "They can be faster and easier to implement"
+        ],
+        "answer": "They are always slower than other approaches"
+      },
+      {
+        "type": "mcq",
+        "question": "What is the benefit of dynamic programming?",
+        "options": [
+          "It runs slower to ensure accuracy",
+          "It solves and stores subproblems to avoid repeating work",
+          "It only works for small problems",
+          "It uses randomness to speed up solving"
+        ],
+        "answer": "It solves and stores subproblems to avoid repeating work"
+      },
+      {
+        "type": "mcq",
+        "question": "What is commonly used to store subproblem results in dynamic programming?",
+        "options": [
+          "A hash set",
+          "A call stack",
+          "A graph",
+          "A grid or table"
+        ],
+        "answer": "A grid or table"
+      },
+      {
+        "type": "mcq",
+        "question": "How does K-Nearest Neighbors (KNN) make predictions?",
+        "options": [
+          "By creating a decision tree",
+          "By checking if a node is in a cycle",
+          "Use nearby data points to predict the category or value of a new item",
+          "By storing all past predictions in a table"
+        ],
+        "answer": "Use nearby data points to predict the category or value of a new item"
+      },
+      {
+        "type": "mcq",
+        "question": "Why are features important in KNN?",
+        "options": [
+          "They are used to build graphs",
+          "Because KNN uses those features to measure distance and similarity",
+          "They help the algorithm sort data by category",
+          "They reduce runtime by skipping comparisons"
+        ],
+        "answer": "Because KNN uses those features to measure distance and similarity"
+      },
+      {
+        "type": "written",
+        "question": "How does Breadth-First Search (BFS) guarantee the shortest path in an unweighted graph?",
+        "answer": "BFS uses a queue to explore nodes level by level, starting from the source node. It visits all neighbors of a node before moving to the next layer of neighbors. Because it checks nodes in order of distance, the first time it reaches a node is always via the shortest path in an unweighted graph. This is why it guarantees the shortest path."
+      },
+      {
+        "type": "written",
+        "question": "What are the roles of the costs and parents tables in Dijkstra’s algorithm?",
+        "answer": "The costs table keeps track of the shortest known distance from the starting node to every other node. The parents table records the previous node for each path, so you can reconstruct the full shortest path at the end. As the algorithm runs, it updates both tables whenever it finds a cheaper path to a node."
+      },
+      {
+        "type": "written",
+        "question": "When are greedy algorithms a good choice? Provide an example of a problem where they work well.",
+        "answer": "Greedy algorithms work well for problems where making the best local choice at each step leads to a globally optimal solution. For example, in the coin change problem (using the fewest coins), if the coin values are set up properly, choosing the largest coin that fits works. This strategy works when the problem has the greedy-choice property."
+      },
+      {
+        "type": "written",
+        "question": "Explain how dynamic programming avoids redundant calculations and why that makes it more efficient.",
+        "answer": "Dynamic programming breaks a big problem into smaller overlapping subproblems. It solves each subproblem once and stores the result in a table (usually a grid), then reuses those results instead of recalculating them. This avoids redundant work and makes the algorithm much more efficient, especially for problems with repeated calculations."
+      },
+      {
+        "type": "written",
+        "question": "Why are features important in K-Nearest Neighbors (KNN), and how can bad features affect predictions?",
+        "answer": "In KNN, features are the measurable characteristics used to compare data points. Good features accurately reflect what makes items similar or different. If the features aren’t relevant or meaningful, the distance calculations will be off, and the algorithm may choose the wrong neighbors—leading to bad predictions."
+      }
+    ]
   }
 ]
