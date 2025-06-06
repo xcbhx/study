@@ -1,49 +1,49 @@
 {% extends "base.html" %}
 
-{% block title %}Breath-First Search Quiz{% endblock %}
+{% block title %}Recursion Quiz{% endblock %}
 
 {% block content %}
 <div class="max-w-3xl mx-auto px-2">
   <h1 class="text-4xl text-center font-bold dark:text-white mb-8">
-    Breath-First Search Quiz
+    Recursion Quiz
   </h1>
 
-  <form action="/submit_breadth_first_search_quiz" method="post">
+  <form action="/submit_recursion_quiz" method="post">
     <fieldset class="mt-8">
       <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
-        1. What is Breadth-First Search (BFS), and how does it work?
+        1.  What is the base case in a recursive function?
       </legend>
 
       <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question1_a" class="flex items-center space-x-2">
-              <input type="radio" name="question1" value="A graph algorithm that explores the deepest nodes first using recursion" id="question1_a">
-              <span>A graph algorithm that explores the deepest nodes first using recursion</span>
+              <input type="radio" name="question1" value="The function that repeats the most" id="question1_a">
+              <span>The function that repeats the most</span>
             </label>
           </div>
         </li>
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question1_b" class="flex items-center space-x-2">
-              <input type="radio" name="question1" value="A graph algorithm that explores nodes in a random order using a stack" id="question1_b">
-              <span>A graph algorithm that explores nodes in a random order using a stack</span>
+              <input type="radio" name="question1" value="The case where the function stops calling itself" id="question1_b">
+              <span>The case where the function stops calling itself</span>
             </label>
           </div>
         </li>
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question1_c" class="flex items-center space-x-2">
-              <input type="radio" name="question1" value="A traversal algorithm that explores all neighbors of a node before moving to the next level using a queue" id="question1_c">
-              <span>A traversal algorithm that explores all neighbors of a node before moving to the next level using a queue</span>
+              <input type="radio" name="question1" value="The part that causes infinite loops" id="question1_c">
+              <span>The part that causes infinite loops</span>
             </label>
           </div>
         </li>
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question1_d" class="flex items-center space-x-2">
-              <input type="radio" name="question1" value="A sorting algorithm that works by comparing adjacent elements" id="question1_d">
-              <span>A sorting algorithm that works by comparing adjacent elements</span>
+              <input type="radio" name="question1" value="The largest input the function can handle" id="question1_d">
+              <span>The largest input the function can handle</span>
             </label>
           </div>
         </li>
@@ -52,39 +52,39 @@
 
     <fieldset class="mt-8">
       <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
-        2. In what scenarios would you use BFS instead of Depth-First Search (DFS)?
+        2. What happens if a recursive function doesn't reach its base case?
       </legend>
 
       <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question2_a" class="flex items-center space-x-2">
-              <input type="radio" name="question2" value="When you want to use less memory" id="question2_a">
-              <span>When you want to use less memory</span>
+              <input type="radio" name="question2" value="It throws a syntax error" id="question2_a">
+              <span>It throws a syntax error</span>
             </label>
           </div>
         </li>
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question2_b" class="flex items-center space-x-2">
-              <input type="radio" name="question2" value="When you need to explore all paths deeply first" id="question2_b">
-              <span>When you need to explore all paths deeply first</span>
+              <input type="radio" name="question2" value="It returns 0" id="question2_b">
+              <span>It returns 0</span>
             </label>
           </div>
         </li>
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question2_c" class="flex items-center space-x-2">
-              <input type="radio" name="question2" value="When you need to find the shortest path in an unweighted graph" id="question2_c">
-              <span>When you need to find the shortest path in an unweighted graph</span>
+              <input type="radio" name="question2" value="It enters infinite recursion and crashes with a stack overflow" id="question2_c">
+              <span>It enters infinite recursion and crashes with a stack overflow</span>
             </label>
           </div>
         </li>
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question2_d" class="flex items-center space-x-2">
-              <input type="radio" name="question2" value="When you want to sort nodes in topological order" id="question2_d">
-              <span>When you want to sort nodes in topological order</span>
+              <input type="radio" name="question2" value="It skips the recursive call" id="question2_d">
+              <span>It skips the recursive call</span>
             </label>
           </div>
         </li>
@@ -93,39 +93,39 @@
 
     <fieldset class="mt-8">
       <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
-        3. How does BFS ensure the shortest path is found in an unweighted graph?
+        3. What is the main role of the call stack in recursion?
       </legend>
 
       <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question3_a" class="flex items-center space-x-2">
-              <input type="radio" name="question3" value="It keeps a record of the number of hops between nodes and chooses the maximum" id="question3_a">
-              <span>It keeps a record of the number of hops between nodes and chooses the maximum</span> 
+              <input type="radio" name="question3" value="It stores the values returned by print statements" id="question3_a">
+              <span>It stores the values returned by print statements</span> 
             </label>
           </div>
         </li>
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question3_b" class="flex items-center space-x-2">
-              <input type="radio" name="question3" value="It visits all nodes randomly until the target is found" id="question3_b">
-              <span>It visits all nodes randomly until the target is found</span>
+              <input type="radio" name="question3" value="It records each function call and where to return afterward" id="question3_b">
+              <span>It records each function call and where to return afterward</span>
             </label>
           </div>
         </li>
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question3_c" class="flex items-center space-x-2">
-              <input type="radio" name="question3" value="It uses a priority queue to rank paths" id="question3_c">
-              <span>It uses a priority queue to rank paths</span>
+              <input type="radio" name="question3" value="It prevents infinite loops" id="question3_c">
+              <span>It prevents infinite loops</span>
             </label>
           </div>
         </li>
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question3_d" class="flex items-center space-x-2">
-              <input type="radio" name="question3" value="It explores nodes level by level, guaranteeing the first time it finds a node is via the shortest path" id="question3_d">
-              <span>It explores nodes level by level, guaranteeing the first time it finds a node is via the shortest path</span>
+              <input type="radio" name="question3" value="It holds user input until recursion is done" id="question3_d">
+              <span>It holds user input until recursion is done</span>
             </label>
           </div>
         </li>
@@ -134,7 +134,7 @@
 
     <fieldset class="mt-8">
       <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
-        4. What data structures are commonly used to implement BFS, and why?
+        4. What does the call stack do during a recursive function call?
       </legend>
 
       <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
@@ -142,31 +142,31 @@
           <div class="flex items-center ps-3">
             <label for="question4_a" class="flex items-center space-x-2">
               <input type="radio" name="question4" value="It stores the values returned by print statements" id="question4_a">
-              <span>Stack and HashMap, because they allow for backtracking</span>
+              <span>It stores the values returned by print statements</span>
             </label>
           </div>
         </li>
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question4_b" class="flex items-center space-x-2">
-              <input type="radio" name="question4" value="Queue and Set, because they ensure nodes are processed in order and avoid revisiting" id="question4_b">
-              <span>Queue and Set, because they ensure nodes are processed in order and avoid revisiting</span>
+              <input type="radio" name="question4" value="It tracks each function call and waits to return until the previous one finishes" id="question4_b">
+              <span>It tracks each function call and waits to return until the previous one finishes</span>
             </label>
           </div>
         </li>
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question4_c" class="flex items-center space-x-2">
-              <input type="radio" name="question4" value="Priority Queue and Stack, for ordering and path optimization" id="question4_c">
-              <span>Priority Queue and Stack, for ordering and path optimization</span>
+              <input type="radio" name="question4" value="It loops through the function body" id="question4_c">
+              <span>It loops through the function body</span>
             </label>
           </div>
         </li>
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question4_d" class="flex items-center space-x-2">
-              <input type="radio" name="question4" value="Heap and List, for memory efficiency" id="question4_d">
-              <span>Heap and List, for memory efficiency</span>
+              <input type="radio" name="question4" value="It deletes memory used by previous calls" id="question4_d">
+              <span>It deletes memory used by previous calls</span>
             </label>
           </div>
         </li>
@@ -175,39 +175,39 @@
 
     <fieldset class="mt-8">
       <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
-        5. Describe how you would apply BFS to find the shortest path from node A to node G in a simple graph.
+        5. Which problem is often solved naturally using recursion?
       </legend>
 
       <ul class="w-full max-w-md text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question5_a" class="flex items-center space-x-2">
-              <input type="radio" name="question5" value="Use a stack to follow each path deeply and mark visited nodes" id="question5_a">
-              <span>Use a stack to follow each path deeply and mark visited nodes</span> 
+              <input type="radio" name="question5" value="Calculating the average of a list" id="question5_a">
+              <span>Calculating the average of a list</span> 
             </label>
           </div>
         </li>
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question5_b" class="flex items-center space-x-2">
-              <input type="radio" name="question5" value="Randomly select nodes to visit until G is found" id="question5_b">
-              <span>Randomly select nodes to visit until G is found</span> 
+              <input type="radio" name="question5" value="Looping through a fixed number of items" id="question5_b">
+              <span>Looping through a fixed number of items</span> 
             </label>
           </div>
         </li>
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question5_c" class="flex items-center space-x-2">
-              <input type="radio" name="question5" value="Use a queue to explore each level of neighbors from A and stop when G is found" id="question5_c">
-              <span>Use a queue to explore each level of neighbors from A and stop when G is found</span>
+              <input type="radio" name="question5" value="Finding factorial of a number" id="question5_c">
+              <span>Finding factorial of a number</span>
             </label>
           </div>
         </li>
         <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
           <div class="flex items-center ps-3">
             <label for="question5_d" class="flex items-center space-x-2">
-              <input type="radio" name="question5" value="Traverse all nodes without marking visited ones to ensure all paths are tried" id="question5_d">
-              <span>Traverse all nodes without marking visited ones to ensure all paths are tried</span>
+              <input type="radio" name="question5" value="Sorting a list alphabetically with a for-loop" id="question5_d">
+              <span>Sorting a list alphabetically with a for-loop</span>
             </label>
           </div>
         </li>
@@ -216,7 +216,7 @@
 
     <fieldset class="mt-8">
       <legend class="mb-4 font-semibold text-base text-gray-900 dark:text-white">
-        6. Why is it important to keep track of the people you've already searched in a BFS algorithm? What problem does this prevent?
+        6. In your own words, explain how recursion works. Why does a recursive function need both a base case and a recursive case?
       </legend>
 
       <label for="question6" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
