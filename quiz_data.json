@@ -325,7 +325,7 @@
     ]
   },
   {
-    "id": "Ch.1 - Ch.5 Answers",
+    "id": "Ch.1-Ch.5 Answers",
     "questions": [
       {
         "type": "mcq",
@@ -530,7 +530,7 @@
     ]
   },
   {
-    "id":"Dijkstra's Algorithm Answers",
+    "id":"Dijkstras Algorithm Answers",
     "questions": [
       {
         "type": "mcq",
@@ -790,12 +790,12 @@
     ]
   },
   {
-    "id":"Ch.6 - Ch.10 Answers",
+    "id":"Ch.6-Ch.10 Answers",
     "questions": [
       {
         "type": "mcq",
         "question": "Which data structure does Breadth-First Search (BFS) use to keep track of nodes to visit next?",
-        "option": [
+        "options": [
           "Stack", 
           "Queue", 
           "Tree", 
@@ -806,7 +806,7 @@
       {
         "type": "mcq",
         "question": "What is the main difference between a queue and a stack?",
-        "option": [
+        "options": [
           "A queue is LIFO and a stack is FIFO",
           "A queue stores only strings, a stack stores integers",
           "A queue is FIFO (First In, First Out), while a stack is LIFO (Last In, First Out)",
@@ -817,7 +817,7 @@
       {
         "type": "mcq",
         "question": "Dijkstra’s algorithm works on which kind of graphs?",
-        "option": [
+        "options": [
           "Graphs with negative edge weights",
           "Graphs with no edges",
           "Graphs with cycles only",
@@ -828,7 +828,7 @@
       {
         "type": "mcq",
         "question": "What does the 'costs' table in Dijkstra’s algorithm represent?",
-        "option": [
+        "options": [
           "It stores the number of neighbors of each node",
           "It lists visited nodes in order",
           "It stores the current shortest known distance to each node",
@@ -839,7 +839,7 @@
       {
         "type": "mcq",
         "question": "What is the key idea behind a greedy algorithm?",
-        "option": [
+        "options": [
           "Try all possible solutions and pick the best",
           "Always make the locally optimal choice at each step",
           "Recurse until a solution is found",
@@ -850,7 +850,7 @@
       {
         "type": "mcq",
         "question": "Which of the following is NOT true about greedy algorithms?",
-        "option": [
+        "options": [
           "They work well on problems with the greedy-choice property",
           "They don’t always produce the optimal solution",
           "They are always slower than other approaches",
@@ -861,7 +861,7 @@
       {
         "type": "mcq",
         "question": "What is the benefit of dynamic programming?",
-        "option": [
+        "options": [
           "It runs slower to ensure accuracy",
           "It solves and stores subproblems to avoid repeating work",
           "It only works for small problems",
@@ -872,7 +872,7 @@
       {
         "type": "mcq",
         "question": "What is commonly used to store subproblem results in dynamic programming?",
-        "option": [
+        "options": [
           "A hash set",
           "A call stack",
           "A graph",
@@ -883,7 +883,7 @@
       {
         "type": "mcq",
         "question": "How does K-Nearest Neighbors (KNN) make predictions?",
-        "option": [
+        "options": [
           "By creating a decision tree",
           "By checking if a node is in a cycle",
           "Use nearby data points to predict the category or value of a new item",
@@ -894,7 +894,7 @@
       {
         "type": "mcq",
         "question": "Why are features important in KNN?",
-        "option": [
+        "options": [
           "They are used to build graphs",
           "Because KNN uses those features to measure distance and similarity",
           "They help the algorithm sort data by category",
