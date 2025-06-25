@@ -19,6 +19,10 @@ def collect_answers(keys):
 def home():
   return render_template('index.html')
 
+@app.route("/contact")
+def contact():
+    return render_template("contact.html")
+
 @app.route('/category', methods=['GET'])
 def category():
   return render_template('category.html')

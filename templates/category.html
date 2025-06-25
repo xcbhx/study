@@ -5,39 +5,41 @@
 {% block content %}
   <h1 class="text-4xl font-extrabold mb-4 text-center">Pick a Quiz:</h1>
 
-  <h3 class="text-lg mb-4 text-center">
+  <h3 class="text-lg mb-6 text-center">
     Take a look at the book to review: 📖
     <a 
       href="https://edu.anarcho-copy.org/Algorithm/grokking-algorithms-illustrated-programmers-curious.pdf" 
       target="_blank" 
-      class="text-blue-600 text-lg hover:underline visited:text-blue-800"
+      class="text-blue-600 hover:underline visited:text-blue-800"
     >
       Grokking Algorithm
     </a>
   </h3>
-  
-  <div class="flex flex-wrap justify-center gap-4">
-    {% set quizzes = [
-      ('Intro_To_Algorithms', 'Introduction to Algorithms Quiz'),
-      ('Selection_Sort', 'Selection Sort'),
-      ('Recursion', 'Recursion'),
-      ('Quicksort', 'Quicksort'),
-      ('Hash_Table', 'Hash Table'),
-      ('Ch.1-Ch.5', 'Review Ch.1 - Ch.5 Quiz'),
-      ('Breadth-First_Search', 'Breadth-First Search'),
-      ('Dijkstras_Algorithm', "Dijkstra's Algorithm"),
-      ('Greedy_Algorithm', 'Greedy Algorithm'),
-      ('Dynamic_Programming', 'Dynamic Programming'),
-      ('K-Nearest_Neighbors', 'K-Nearest Neighbors'),
-      ('Ch.6-Ch.10', 'Review Ch.6 - Ch.10 Quiz')
-    ] %}
 
-    {% for quiz_id, label in quizzes %}
-      <a href="/quiz/{{ quiz_id }}">
-        <button type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">
-          {{ label }}
-        </button>
-      </a>
-    {% endfor %}
-  </div>
+  {% set quizzes = [
+    ('Intro_To_Algorithms', 'Introduction to Algorithms Quiz'),
+    ('Selection_Sort', 'Selection Sort'),
+    ('Recursion', 'Recursion'),
+    ('Quicksort', 'Quicksort'),
+    ('Hash_Table', 'Hash Table'),
+    ('Ch.1-Ch.5', 'Review Ch.1 - Ch.5 Quiz'),
+    ('Breadth-First_Search', 'Breadth-First Search'),
+    ('Dijkstras_Algorithm', "Dijkstra's Algorithm"),
+    ('Greedy_Algorithm', 'Greedy Algorithm'),
+    ('Dynamic_Programming', 'Dynamic Programming'),
+    ('K-Nearest_Neighbors', 'K-Nearest Neighbors'),
+    ('Ch.6-Ch.10', 'Review Ch.6 - Ch.10 Quiz')
+  ] %}
+
+  <section class="py-12">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+      {% for quiz_id, label in quizzes %}
+        <a href="/quiz/{{ quiz_id }}">
+          <button type="button" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-lg px-7 py-3 text-center w-full">
+            {{ label }}
+          </button>
+        </a>
+      {% endfor %}
+    </div>
+  </section>
 {% endblock %}
